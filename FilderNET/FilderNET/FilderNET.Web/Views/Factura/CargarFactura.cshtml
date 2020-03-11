@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "CargarFactura";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action="UploadFile" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" id="file" />
+    <br />
+    <button type="submit" class="btn btn-primary">Subir Archivo</button>
+</form>
+

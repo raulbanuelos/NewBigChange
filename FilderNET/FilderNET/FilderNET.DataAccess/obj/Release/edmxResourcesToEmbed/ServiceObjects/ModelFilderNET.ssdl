@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BD_NETModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBL_ARCHIVO_GLOBAL">
+    <Key>
+      <PropertyRef Name="ID_ARCHIVO_GLOBAL" />
+    </Key>
+    <Property Name="ID_ARCHIVO_GLOBAL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_GLOBAL" Type="int" />
+    <Property Name="NOMBRE_ARCHIVO" Type="varchar" MaxLength="50" />
+    <Property Name="EXT" Type="varchar" MaxLength="10" />
+    <Property Name="RUTA" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TBL_COMISION_PROMOTOR">
+    <Key>
+      <PropertyRef Name="ID_COMISION_PROMOTOR" />
+    </Key>
+    <Property Name="ID_COMISION_PROMOTOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SERVICIO" Type="varchar" MaxLength="50" />
+    <Property Name="TIPO" Type="varchar" MaxLength="50" />
+    <Property Name="PAQUETE" Type="varchar" MaxLength="50" />
+    <Property Name="COMISION" Type="float" />
+  </EntityType>
+  <EntityType Name="TBL_FOLIOS">
+    <Key>
+      <PropertyRef Name="FOLIO_SIAC" />
+    </Key>
+    <Property Name="FOLIO_SIAC" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FECHA_CAPTURA" Type="datetime" />
+    <Property Name="ESTRATEGIA" Type="varchar(max)" />
+    <Property Name="PROMOTOR" Type="varchar(max)" />
+    <Property Name="ESTATUS_SIAC" Type="varchar(max)" />
+    <Property Name="TIPO_LINEA" Type="varchar(max)" />
+    <Property Name="LINEA_CONTRATADA" Type="varchar(max)" />
+    <Property Name="AREA" Type="varchar(max)" />
+    <Property Name="DIVICION" Type="varchar(max)" />
+    <Property Name="TIENDA" Type="varchar(max)" />
+    <Property Name="PAQUETE" Type="varchar(max)" />
+    <Property Name="OBSERVACIONES" Type="varchar(max)" />
+    <Property Name="RESPUESTA_TELMEX" Type="varchar(max)" />
+    <Property Name="MOTIVO_RECHAZO" Type="varchar(max)" />
+    <Property Name="TELEFONO_ASIGNADO" Type="varchar(max)" />
+    <Property Name="TELEFONO_PORTADO" Type="varchar(max)" />
+    <Property Name="OS_ALTA_LINEA_MULTIORDEN" Type="varchar(max)" />
+    <Property Name="FECHA_OS_ALTA_LINEA_MULTIORDEN" Type="varchar(max)" />
+    <Property Name="ORDEN_SERVICIO_TV" Type="varchar(max)" />
+    <Property Name="FECHA_OS_TV" Type="varchar(max)" />
+    <Property Name="CAMPANA" Type="varchar(max)" />
+    <Property Name="ESTATUS_ATENCION_MULTIORDEN" Type="varchar(max)" />
+    <Property Name="ESTATUS_PISA_MULTIORDEN" Type="varchar(max)" />
+    <Property Name="PISA_OS_FECHA_POSTEO_MULTIORDEN" Type="varchar(max)" />
+    <Property Name="ESTATUS_PISA_TV" Type="varchar(max)" />
+    <Property Name="PISA_OS_FECHA_POSTEO_TV" Type="varchar(max)" />
+    <Property Name="FECHA_CAMBIO_ESTATUS_SIAC" Type="varchar(max)" />
+    <Property Name="CLAVE_EMPRESA" Type="varchar(max)" />
+    <Property Name="NOMBRE_EMPRESA" Type="varchar(max)" />
+    <Property Name="SERVICIO_FACTURACION_TERCEROS" Type="varchar(max)" />
+    <Property Name="ETAPA_PISA_MULTIORDEN" Type="varchar(max)" />
+    <Property Name="ETAPA_PISA_TV" Type="varchar(max)" />
+    <Property Name="ETIQUETA_TRAFICO_VOZ" Type="varchar(max)" />
+    <Property Name="TRAFICO_VOZ_ENTRANTE" Type="varchar(max)" />
+    <Property Name="TRAFICO_VOZ_SALIENTE" Type="varchar(max)" />
+    <Property Name="FECHA_TRAFICO_VOZ" Type="varchar(max)" />
+    <Property Name="TRAFICO_DATOS" Type="varchar(max)" />
+    <Property Name="FECHA_TRAFICO_DATOS" Type="varchar(max)" />
+    <Property Name="FECHA_FACTURCION" Type="varchar(max)" />
+    <Property Name="DESCRIPCION_VALIDA_ADEUDO" Type="varchar(max)" />
+    <Property Name="CORREO_ELECTRONICO" Type="varchar(max)" />
+    <Property Name="FECHA_NACIMIENTO" Type="varchar(max)" />
+    <Property Name="ID" Type="varchar(max)" />
+    <Property Name="TERMINAL" Type="varchar(max)" />
+    <Property Name="DISTRITO" Type="varchar(max)" />
+    <Property Name="TECELULAR" Type="varchar(max)" />
+    <Property Name="FECHA_CREACION" Type="datetime" />
+    <Property Name="FECHA_CALCULO_COMISION" Type="datetime" />
+    <Property Name="ESTATUS_PAGADO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_GLOBAL">
+    <Key>
+      <PropertyRef Name="ID_GLOBAL" />
+    </Key>
+    <Property Name="ID_GLOBAL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_PROMOTOR" Type="int" />
+    <Property Name="FECHA_ELABORACION" Type="datetime" />
+    <Property Name="FILDER" Type="varchar" MaxLength="50" />
+    <Property Name="FECHA_CAPTURA" Type="datetime" />
+    <Property Name="MESA_CONTROL" Type="varchar" MaxLength="50" />
+    <Property Name="NOMBRE_CLIENTE" Type="varchar" MaxLength="200" />
+    <Property Name="TEL_CONTACTO" Type="varchar" MaxLength="50" />
+    <Property Name="SERVICIO" Type="varchar" MaxLength="50" />
+    <Property Name="TIPO" Type="varchar" MaxLength="50" />
+    <Property Name="PAQUETE" Type="varchar" MaxLength="50" />
+    <Property Name="FOLIO_SIAC" Type="varchar" MaxLength="50" />
+    <Property Name="PAGO_A_PROMOTOR" Type="varchar" MaxLength="50" />
+    <Property Name="ESTATUS_PAGO_INGRESO" Type="bit" />
+    <Property Name="FECHA_PAGO_INGRESO" Type="date" />
+    <Property Name="ESTATUS_PAGO_POSTEO" Type="bit" />
+    <Property Name="FECHA_PAGO_POSTEO" Type="date" />
+    <Property Name="OBSERVACIONES" Type="varchar(max)" />
+    <Property Name="ESTATUS_PAGO_INGRESO_LIDER" Type="bit" />
+    <Property Name="FECHA_PAGO_INGRESO_LIDER" Type="date" />
+    <Property Name="ESTATUS_PAGO_POSTEO_LIDER" Type="bit" />
+    <Property Name="FECHA_PAGO_POSTEO_LIDER" Type="date" />
+  </EntityType>
+  <EntityType Name="TBL_JERARQUIA">
+    <Key>
+      <PropertyRef Name="ID_JERARQUIA" />
+    </Key>
+    <Property Name="ID_JERARQUIA" Type="int" Nullable="false" />
+    <Property Name="JERARQUIA" Type="varchar" MaxLength="50" />
+    <Property Name="VALOR" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_LOG">
+    <Key>
+      <PropertyRef Name="ID_LOG" />
+    </Key>
+    <Property Name="ID_LOG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="100" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TBL_USUARIO">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_JERARQUIA" Type="int" Nullable="false" />
+    <Property Name="ID_JEFE" Type="int" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CONTRASENA" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="APELLIDO_PATERNO" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="APELLIDO_MATERNO" Type="varchar" MaxLength="100" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FECHA_NACIMIENTO" Type="date" Nullable="false" />
+    <Property Name="CURP" Type="varchar" MaxLength="50" />
+    <Property Name="RFC" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FOTO" Type="varchar(max)" />
+    <Property Name="ACTIVO" Type="bit" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="FECHA_ACTUALIZACION" Type="date" />
+  </EntityType>
+  <Association Name="FK_TBL_ARCHIVO_GLOBAL_TBL_GLOBAL">
+    <End Role="TBL_GLOBAL" Type="Self.TBL_GLOBAL" Multiplicity="0..1" />
+    <End Role="TBL_ARCHIVO_GLOBAL" Type="Self.TBL_ARCHIVO_GLOBAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_GLOBAL">
+        <PropertyRef Name="ID_GLOBAL" />
+      </Principal>
+      <Dependent Role="TBL_ARCHIVO_GLOBAL">
+        <PropertyRef Name="ID_GLOBAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_GLOBAL_TBL_USUARIO">
+    <End Role="TBL_USUARIO" Type="Self.TBL_USUARIO" Multiplicity="0..1" />
+    <End Role="TBL_GLOBAL" Type="Self.TBL_GLOBAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_USUARIO">
+        <PropertyRef Name="ID_USUARIO" />
+      </Principal>
+      <Dependent Role="TBL_GLOBAL">
+        <PropertyRef Name="ID_PROMOTOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBL_USUARIO_TBL_JERARQUIA">
+    <End Role="TBL_JERARQUIA" Type="Self.TBL_JERARQUIA" Multiplicity="1" />
+    <End Role="TBL_USUARIO" Type="Self.TBL_USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_JERARQUIA">
+        <PropertyRef Name="ID_JERARQUIA" />
+      </Principal>
+      <Dependent Role="TBL_USUARIO">
+        <PropertyRef Name="ID_JERARQUIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BD_NETModel1StoreContainer">
+    <EntitySet Name="TBL_ARCHIVO_GLOBAL" EntityType="Self.TBL_ARCHIVO_GLOBAL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_COMISION_PROMOTOR" EntityType="Self.TBL_COMISION_PROMOTOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_FOLIOS" EntityType="Self.TBL_FOLIOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_GLOBAL" EntityType="Self.TBL_GLOBAL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_JERARQUIA" EntityType="Self.TBL_JERARQUIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_LOG" EntityType="Self.TBL_LOG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_USUARIO" EntityType="Self.TBL_USUARIO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TBL_ARCHIVO_GLOBAL_TBL_GLOBAL" Association="Self.FK_TBL_ARCHIVO_GLOBAL_TBL_GLOBAL">
+      <End Role="TBL_GLOBAL" EntitySet="TBL_GLOBAL" />
+      <End Role="TBL_ARCHIVO_GLOBAL" EntitySet="TBL_ARCHIVO_GLOBAL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_GLOBAL_TBL_USUARIO" Association="Self.FK_TBL_GLOBAL_TBL_USUARIO">
+      <End Role="TBL_USUARIO" EntitySet="TBL_USUARIO" />
+      <End Role="TBL_GLOBAL" EntitySet="TBL_GLOBAL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBL_USUARIO_TBL_JERARQUIA" Association="Self.FK_TBL_USUARIO_TBL_JERARQUIA">
+      <End Role="TBL_JERARQUIA" EntitySet="TBL_JERARQUIA" />
+      <End Role="TBL_USUARIO" EntitySet="TBL_USUARIO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

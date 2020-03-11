@@ -1,0 +1,169 @@
+﻿@model IEnumerable<FilderNET.Web.Models.ModeloGlobal>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    th {
+        font-size: 12px;
+        font-weight: bold
+    }
+
+    td {
+        font-size: 12px
+    }
+</style>
+
+
+<a href="@Url.Action("NewGlobal","Global")">Agregar a global</a>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card m-h-50">
+            <div class="card-body">
+                <h4 class="mt-0 header-title">GLOBAL</h4>
+
+                <table id="datatable-buttons" class="table table-striped table-bordered table-responsive" cellpadding="0" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>
+                                PROMOTOR
+                            </th>
+
+                            <th>
+                                FECHA CAPTURA
+                            </th>
+                            <th>
+                                MESA CONTROL
+                            </th>
+                            <th>
+                                CLIENTE
+                            </th>
+                            <th>
+                                PAQUETE
+                            </th>
+                            <th>
+                                FOLIO SIAC
+                            </th>
+                            <th>
+                                PAGO A PROMOTOR
+                            </th>
+                            <th>
+                                PAGO INGRESO
+                            </th>
+                            <th>
+                                PAGO POSTEO
+                            </th>
+                            <th>
+                                ESTATUS SIAC
+                            </th>
+                            <th>
+                                ESTATUS PISA MULTIORDEN
+                            </th>
+                            <th>
+                                AREA
+                            </th>
+                            <th>
+                                ACCIONES
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NOMBRE_PROMOTOR)
+                                </td>
+                                <td>
+                                    @item.FECHA_CAPTURA.ToString("dd/MM/yyyy")
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MESA_CONTROL)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NOMBRE_CLIENTE)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PAQUETE)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FOLIO_SIAC)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PAGO_A_PROMOTOR)
+                                </td>
+                                @{
+                                    if (item.ESTATUS_PAGO_INGRESO)
+                                    {
+                                        <td><span class="badge badge-success">Pagado</span></td>
+                                    }
+                                    else
+                                    {
+                                        <td><span class="badge badge-warning">No pagado</span></td>
+                                    }
+                                }
+
+                                @{
+                                    if (item.ESTATUS_PAGO_POSTEO)
+                                    {
+                                        <td><span class="badge badge-success">Pagado</span></td>
+                                    }
+                                    else
+                                    {
+                                        <td><span class="badge badge-warning">No pagado</span></td>
+                                    }
+                                }
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ESTATUS_SIAC)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ESTATUS_PISA_MULTIORDEN)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AREA)
+                                </td>
+                                <td>
+                                    <div>
+                                        <a href="@Url.Action("EditGlobal","Global", new { ID_GLOBAL = item.ID_GLOBAL})" class="btn btn-info waves-effect waves-light">Detalle</a>
+                                    </div>
+
+                                    @if ((bool)Session["BAN_MASTER"] || (bool)Session["BAN_DUENO"] || (bool)Session["BAN_SISTEMAS"])
+                                    {
+                                        <div>
+                                            <a href="@Url.Action("DeleteGlobal","Global", new { idGlobal = item.ID_GLOBAL})" class="btn btn-danger waves-effect waves-light">Eliminar</a>
+                                        </div>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <!-- Required datatable js -->
+    <script src="@Url.Content("~/assets/plugins/datatables/jquery.dataTables.min.js")"></script>
+    <script src="@Url.Content("~/assets/plugins/datatables/dataTables.bootstrap4.min.js")"></script>
+    <!-- Buttons examples -->
+    <script src="@Url.Content("~/assets/plugins/datatables/dataTables.buttons.min.js")"></script>
+    <script src="@Url.Content("~/assets/plugins/datatables/buttons.bootstrap4.min.js")"></script>
+    <script src="@Url.Content("~/assets/plugins/datatables/jszip.min.js")"></script>
+    <script src="@Url.Content("~/assets/plugins/datatables/pdfmake.min.js")"></script>
+    <script src="@Url.Content("~/assets/plugins/datatables/vfs_fonts.js")"></script>
+    <script src="@Url.Content("~/assets/plugins/datatables/buttons.html5.min.js")"></script>
+    <script src="@Url.Content("~/assets/plugins/datatables/buttons.print.min.js")"></script>
+    <script src="@Url.Content("~/assets/plugins/datatables/buttons.colVis.min.js")"></script>
+    <!-- Responsive examples -->
+    <script src="@Url.Content("~/assets/plugins/datatables/dataTables.responsive.min.js")"></script>
+    <script src="@Url.Content("~/assets/plugins/datatables/responsive.bootstrap4.min.js")"></script>
+
+    <!-- Datatable init js -->
+    <script src="@Url.Content("~/assets/pages/datatables.init.js")"></script>
+}

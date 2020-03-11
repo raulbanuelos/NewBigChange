@@ -1,0 +1,73 @@
+﻿@model IEnumerable<FilderNET.Web.Models.DO_Pago>
+
+@{
+    ViewBag.Title = "GetPago";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetPago</h2>
+
+
+<table class="table table-responsive">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE_CLIENTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SERVICIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_LINEA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PAQUETE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE_PROMOTOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FOLIO_SIAC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INGRESO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CONCEPTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AREA)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE_CLIENTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SERVICIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_LINEA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PAQUETE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE_PROMOTOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FOLIO_SIAC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INGRESO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CONCEPTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AREA)
+        </td>
+    </tr>
+}
+</table>

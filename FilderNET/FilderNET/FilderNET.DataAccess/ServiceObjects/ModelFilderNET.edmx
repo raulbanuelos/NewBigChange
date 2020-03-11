@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BD_NETModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBL_ARCHIVO_GLOBAL">
+          <Key>
+            <PropertyRef Name="ID_ARCHIVO_GLOBAL" />
+          </Key>
+          <Property Name="ID_ARCHIVO_GLOBAL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_GLOBAL" Type="int" />
+          <Property Name="NOMBRE_ARCHIVO" Type="varchar" MaxLength="50" />
+          <Property Name="EXT" Type="varchar" MaxLength="10" />
+          <Property Name="RUTA" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="TBL_COMISION_PROMOTOR">
+          <Key>
+            <PropertyRef Name="ID_COMISION_PROMOTOR" />
+          </Key>
+          <Property Name="ID_COMISION_PROMOTOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SERVICIO" Type="varchar" MaxLength="50" />
+          <Property Name="TIPO" Type="varchar" MaxLength="50" />
+          <Property Name="PAQUETE" Type="varchar" MaxLength="50" />
+          <Property Name="COMISION" Type="float" />
+        </EntityType>
+        <EntityType Name="TBL_FOLIOS">
+          <Key>
+            <PropertyRef Name="FOLIO_SIAC" />
+          </Key>
+          <Property Name="FOLIO_SIAC" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FECHA_CAPTURA" Type="datetime" />
+          <Property Name="ESTRATEGIA" Type="varchar(max)" />
+          <Property Name="PROMOTOR" Type="varchar(max)" />
+          <Property Name="ESTATUS_SIAC" Type="varchar(max)" />
+          <Property Name="TIPO_LINEA" Type="varchar(max)" />
+          <Property Name="LINEA_CONTRATADA" Type="varchar(max)" />
+          <Property Name="AREA" Type="varchar(max)" />
+          <Property Name="DIVICION" Type="varchar(max)" />
+          <Property Name="TIENDA" Type="varchar(max)" />
+          <Property Name="PAQUETE" Type="varchar(max)" />
+          <Property Name="OBSERVACIONES" Type="varchar(max)" />
+          <Property Name="RESPUESTA_TELMEX" Type="varchar(max)" />
+          <Property Name="MOTIVO_RECHAZO" Type="varchar(max)" />
+          <Property Name="TELEFONO_ASIGNADO" Type="varchar(max)" />
+          <Property Name="TELEFONO_PORTADO" Type="varchar(max)" />
+          <Property Name="OS_ALTA_LINEA_MULTIORDEN" Type="varchar(max)" />
+          <Property Name="FECHA_OS_ALTA_LINEA_MULTIORDEN" Type="varchar(max)" />
+          <Property Name="ORDEN_SERVICIO_TV" Type="varchar(max)" />
+          <Property Name="FECHA_OS_TV" Type="varchar(max)" />
+          <Property Name="CAMPANA" Type="varchar(max)" />
+          <Property Name="ESTATUS_ATENCION_MULTIORDEN" Type="varchar(max)" />
+          <Property Name="ESTATUS_PISA_MULTIORDEN" Type="varchar(max)" />
+          <Property Name="PISA_OS_FECHA_POSTEO_MULTIORDEN" Type="varchar(max)" />
+          <Property Name="ESTATUS_PISA_TV" Type="varchar(max)" />
+          <Property Name="PISA_OS_FECHA_POSTEO_TV" Type="varchar(max)" />
+          <Property Name="FECHA_CAMBIO_ESTATUS_SIAC" Type="varchar(max)" />
+          <Property Name="CLAVE_EMPRESA" Type="varchar(max)" />
+          <Property Name="NOMBRE_EMPRESA" Type="varchar(max)" />
+          <Property Name="SERVICIO_FACTURACION_TERCEROS" Type="varchar(max)" />
+          <Property Name="ETAPA_PISA_MULTIORDEN" Type="varchar(max)" />
+          <Property Name="ETAPA_PISA_TV" Type="varchar(max)" />
+          <Property Name="ETIQUETA_TRAFICO_VOZ" Type="varchar(max)" />
+          <Property Name="TRAFICO_VOZ_ENTRANTE" Type="varchar(max)" />
+          <Property Name="TRAFICO_VOZ_SALIENTE" Type="varchar(max)" />
+          <Property Name="FECHA_TRAFICO_VOZ" Type="varchar(max)" />
+          <Property Name="TRAFICO_DATOS" Type="varchar(max)" />
+          <Property Name="FECHA_TRAFICO_DATOS" Type="varchar(max)" />
+          <Property Name="FECHA_FACTURCION" Type="varchar(max)" />
+          <Property Name="DESCRIPCION_VALIDA_ADEUDO" Type="varchar(max)" />
+          <Property Name="CORREO_ELECTRONICO" Type="varchar(max)" />
+          <Property Name="FECHA_NACIMIENTO" Type="varchar(max)" />
+          <Property Name="ID" Type="varchar(max)" />
+          <Property Name="TERMINAL" Type="varchar(max)" />
+          <Property Name="DISTRITO" Type="varchar(max)" />
+          <Property Name="TECELULAR" Type="varchar(max)" />
+          <Property Name="FECHA_CREACION" Type="datetime" />
+          <Property Name="FECHA_CALCULO_COMISION" Type="datetime" />
+          <Property Name="ESTATUS_PAGADO" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBL_GLOBAL">
+          <Key>
+            <PropertyRef Name="ID_GLOBAL" />
+          </Key>
+          <Property Name="ID_GLOBAL" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_PROMOTOR" Type="int" />
+          <Property Name="FECHA_ELABORACION" Type="datetime" />
+          <Property Name="FILDER" Type="varchar" MaxLength="50" />
+          <Property Name="FECHA_CAPTURA" Type="datetime" />
+          <Property Name="MESA_CONTROL" Type="varchar" MaxLength="50" />
+          <Property Name="NOMBRE_CLIENTE" Type="varchar" MaxLength="200" />
+          <Property Name="TEL_CONTACTO" Type="varchar" MaxLength="50" />
+          <Property Name="SERVICIO" Type="varchar" MaxLength="50" />
+          <Property Name="TIPO" Type="varchar" MaxLength="50" />
+          <Property Name="PAQUETE" Type="varchar" MaxLength="50" />
+          <Property Name="FOLIO_SIAC" Type="varchar" MaxLength="50" />
+          <Property Name="PAGO_A_PROMOTOR" Type="varchar" MaxLength="50" />
+          <Property Name="ESTATUS_PAGO_INGRESO" Type="bit" />
+          <Property Name="FECHA_PAGO_INGRESO" Type="date" />
+          <Property Name="ESTATUS_PAGO_POSTEO" Type="bit" />
+          <Property Name="FECHA_PAGO_POSTEO" Type="date" />
+          <Property Name="OBSERVACIONES" Type="varchar(max)" />
+          <Property Name="ESTATUS_PAGO_INGRESO_LIDER" Type="bit" />
+          <Property Name="FECHA_PAGO_INGRESO_LIDER" Type="date" />
+          <Property Name="ESTATUS_PAGO_POSTEO_LIDER" Type="bit" />
+          <Property Name="FECHA_PAGO_POSTEO_LIDER" Type="date" />
+        </EntityType>
+        <EntityType Name="TBL_JERARQUIA">
+          <Key>
+            <PropertyRef Name="ID_JERARQUIA" />
+          </Key>
+          <Property Name="ID_JERARQUIA" Type="int" Nullable="false" />
+          <Property Name="JERARQUIA" Type="varchar" MaxLength="50" />
+          <Property Name="VALOR" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBL_LOG">
+          <Key>
+            <PropertyRef Name="ID_LOG" />
+          </Key>
+          <Property Name="ID_LOG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FECHA" Type="datetime" />
+          <Property Name="USUARIO" Type="varchar" MaxLength="200" />
+          <Property Name="DESCRIPCION" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="TBL_NET_BONO">
+          <Key>
+            <PropertyRef Name="ID_BONO" />
+          </Key>
+          <Property Name="ID_BONO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QUINCENA" Type="date" />
+          <Property Name="RUBRO" Type="varchar" MaxLength="50" />
+          <Property Name="FOLIO" Type="varchar" MaxLength="50" />
+          <Property Name="IMPORTE_EFECTIVIDAD" Type="float" />
+          <Property Name="IMPORTE_COMERCIO" Type="float" />
+          <Property Name="IMPORTE_CALIDAD" Type="float" />
+        </EntityType>
+        <EntityType Name="TBL_NET_BONO_HISTORICO">
+          <Key>
+            <PropertyRef Name="ID_BONO_HISTORICO" />
+          </Key>
+          <Property Name="ID_BONO_HISTORICO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QUINCENA" Type="date" />
+          <Property Name="RUBRO" Type="varchar" MaxLength="50" />
+          <Property Name="FOLIO" Type="varchar" MaxLength="50" />
+          <Property Name="IMPORTE_EFECTIVIDAD" Type="float" />
+          <Property Name="IMPORTE_COMERCIO" Type="float" />
+          <Property Name="IMPORTE_CALIDAD" Type="float" />
+        </EntityType>
+        <EntityType Name="TBL_NET_FACTURA">
+          <Key>
+            <PropertyRef Name="ID_FACTURA" />
+          </Key>
+          <Property Name="ID_FACTURA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QUINCENA" Type="date" />
+          <Property Name="FOLIO_SIAC" Type="varchar" MaxLength="50" />
+          <Property Name="IMPORTE_BASE" Type="float" />
+          <Property Name="IMPORTE_POSTEO" Type="float" />
+          <Property Name="PISA_E" Type="varchar" MaxLength="50" />
+          <Property Name="PROCEDE2" Type="varchar" MaxLength="50" />
+          <Property Name="PAGO2" Type="varchar" MaxLength="50" />
+          <Property Name="FECHA" Type="varchar" MaxLength="50" />
+          <Property Name="OS_PAGO" Type="varchar" MaxLength="50" />
+          <Property Name="ESTATUS" Type="varchar" MaxLength="50" />
+          <Property Name="LINEA_CONTRATADA" Type="varchar" MaxLength="50" />
+          <Property Name="PAQUETE" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBL_NET_HISTORICO_FACTURA">
+          <Key>
+            <PropertyRef Name="ID_HISTORICO_FACTURA" />
+          </Key>
+          <Property Name="ID_HISTORICO_FACTURA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="QUINCENA" Type="date" />
+          <Property Name="FOLIO_SIAC" Type="varchar" MaxLength="50" />
+          <Property Name="IMPORTE_BASE" Type="float" />
+          <Property Name="IMPORTE_POSTEO" Type="float" />
+          <Property Name="PISA_E" Type="varchar" MaxLength="50" />
+          <Property Name="PROCEDE2" Type="varchar" MaxLength="50" />
+          <Property Name="PAGO2" Type="varchar" MaxLength="50" />
+          <Property Name="FECHA" Type="varchar" MaxLength="50" />
+          <Property Name="OS_PAGO" Type="varchar" MaxLength="50" />
+          <Property Name="ESTATUS" Type="varchar" MaxLength="50" />
+          <Property Name="LINEA_CONTRATADA" Type="varchar" MaxLength="50" />
+          <Property Name="PAQUETE" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBL_USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_JERARQUIA" Type="int" Nullable="false" />
+          <Property Name="ID_JEFE" Type="int" />
+          <Property Name="USUARIO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CONTRASENA" Type="varchar" MaxLength="18" Nullable="false" />
+          <Property Name="APELLIDO_PATERNO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="APELLIDO_MATERNO" Type="varchar" MaxLength="100" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="date" Nullable="false" />
+          <Property Name="CURP" Type="varchar" MaxLength="50" />
+          <Property Name="RFC" Type="varchar" MaxLength="18" Nullable="false" />
+          <Property Name="TELEFONO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FOTO" Type="varchar(max)" />
+          <Property Name="ACTIVO" Type="bit" Nullable="false" />
+          <Property Name="FECHA_CREACION" Type="date" />
+          <Property Name="FECHA_ACTUALIZACION" Type="date" />
+        </EntityType>
+        <Association Name="FK_TBL_ARCHIVO_GLOBAL_TBL_GLOBAL">
+          <End Role="TBL_GLOBAL" Type="Self.TBL_GLOBAL" Multiplicity="0..1" />
+          <End Role="TBL_ARCHIVO_GLOBAL" Type="Self.TBL_ARCHIVO_GLOBAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_GLOBAL">
+              <PropertyRef Name="ID_GLOBAL" />
+            </Principal>
+            <Dependent Role="TBL_ARCHIVO_GLOBAL">
+              <PropertyRef Name="ID_GLOBAL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_GLOBAL_TBL_USUARIO">
+          <End Role="TBL_USUARIO" Type="Self.TBL_USUARIO" Multiplicity="0..1" />
+          <End Role="TBL_GLOBAL" Type="Self.TBL_GLOBAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_USUARIO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="TBL_GLOBAL">
+              <PropertyRef Name="ID_PROMOTOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_USUARIO_TBL_JERARQUIA">
+          <End Role="TBL_JERARQUIA" Type="Self.TBL_JERARQUIA" Multiplicity="1" />
+          <End Role="TBL_USUARIO" Type="Self.TBL_USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_JERARQUIA">
+              <PropertyRef Name="ID_JERARQUIA" />
+            </Principal>
+            <Dependent Role="TBL_USUARIO">
+              <PropertyRef Name="ID_JERARQUIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BD_NETModel1StoreContainer">
+          <EntitySet Name="TBL_ARCHIVO_GLOBAL" EntityType="Self.TBL_ARCHIVO_GLOBAL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_COMISION_PROMOTOR" EntityType="Self.TBL_COMISION_PROMOTOR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_FOLIOS" EntityType="Self.TBL_FOLIOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_GLOBAL" EntityType="Self.TBL_GLOBAL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_JERARQUIA" EntityType="Self.TBL_JERARQUIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_LOG" EntityType="Self.TBL_LOG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_NET_BONO" EntityType="Self.TBL_NET_BONO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_NET_BONO_HISTORICO" EntityType="Self.TBL_NET_BONO_HISTORICO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_NET_FACTURA" EntityType="Self.TBL_NET_FACTURA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_NET_HISTORICO_FACTURA" EntityType="Self.TBL_NET_HISTORICO_FACTURA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_USUARIO" EntityType="Self.TBL_USUARIO" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TBL_ARCHIVO_GLOBAL_TBL_GLOBAL" Association="Self.FK_TBL_ARCHIVO_GLOBAL_TBL_GLOBAL">
+            <End Role="TBL_GLOBAL" EntitySet="TBL_GLOBAL" />
+            <End Role="TBL_ARCHIVO_GLOBAL" EntitySet="TBL_ARCHIVO_GLOBAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_GLOBAL_TBL_USUARIO" Association="Self.FK_TBL_GLOBAL_TBL_USUARIO">
+            <End Role="TBL_USUARIO" EntitySet="TBL_USUARIO" />
+            <End Role="TBL_GLOBAL" EntitySet="TBL_GLOBAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_USUARIO_TBL_JERARQUIA" Association="Self.FK_TBL_USUARIO_TBL_JERARQUIA">
+            <End Role="TBL_JERARQUIA" EntitySet="TBL_JERARQUIA" />
+            <End Role="TBL_USUARIO" EntitySet="TBL_USUARIO" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BD_NETModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TBL_JERARQUIA">
+          <Key>
+            <PropertyRef Name="ID_JERARQUIA" />
+          </Key>
+          <Property Name="ID_JERARQUIA" Type="Int32" Nullable="false" />
+          <Property Name="JERARQUIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VALOR" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TBL_USUARIO" Relationship="Self.FK_TBL_USUARIO_TBL_JERARQUIA" FromRole="TBL_JERARQUIA" ToRole="TBL_USUARIO" />
+        </EntityType>
+        <EntityType Name="TBL_USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_JERARQUIA" Type="Int32" Nullable="false" />
+          <Property Name="ID_JEFE" Type="Int32" />
+          <Property Name="USUARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CONTRASENA" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APELLIDO_PATERNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APELLIDO_MATERNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CURP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RFC" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TELEFONO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FOTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ACTIVO" Type="Boolean" Nullable="false" />
+          <Property Name="FECHA_CREACION" Type="DateTime" Precision="0" />
+          <Property Name="FECHA_ACTUALIZACION" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="TBL_JERARQUIA" Relationship="Self.FK_TBL_USUARIO_TBL_JERARQUIA" FromRole="TBL_USUARIO" ToRole="TBL_JERARQUIA" />
+          <NavigationProperty Name="TBL_GLOBAL" Relationship="BD_NETModel1.FK_TBL_GLOBAL_TBL_USUARIO" FromRole="TBL_USUARIO" ToRole="TBL_GLOBAL" />
+        </EntityType>
+        <Association Name="FK_TBL_USUARIO_TBL_JERARQUIA">
+          <End Role="TBL_JERARQUIA" Type="Self.TBL_JERARQUIA" Multiplicity="1" />
+          <End Role="TBL_USUARIO" Type="Self.TBL_USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_JERARQUIA">
+              <PropertyRef Name="ID_JERARQUIA" />
+            </Principal>
+            <Dependent Role="TBL_USUARIO">
+              <PropertyRef Name="ID_JERARQUIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EntitiesFilder" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBL_JERARQUIA" EntityType="Self.TBL_JERARQUIA" />
+          <EntitySet Name="TBL_USUARIO" EntityType="Self.TBL_USUARIO" />
+          <AssociationSet Name="FK_TBL_USUARIO_TBL_JERARQUIA" Association="Self.FK_TBL_USUARIO_TBL_JERARQUIA">
+            <End Role="TBL_JERARQUIA" EntitySet="TBL_JERARQUIA" />
+            <End Role="TBL_USUARIO" EntitySet="TBL_USUARIO" />
+          </AssociationSet>
+          <EntitySet Name="TBL_FOLIOS" EntityType="BD_NETModel1.TBL_FOLIOS" />
+          <EntitySet Name="TBL_ARCHIVO_GLOBAL" EntityType="BD_NETModel1.TBL_ARCHIVO_GLOBAL" />
+          <EntitySet Name="TBL_COMISION_PROMOTOR" EntityType="BD_NETModel1.TBL_COMISION_PROMOTOR" />
+          <EntitySet Name="TBL_GLOBAL" EntityType="BD_NETModel1.TBL_GLOBAL" />
+          <AssociationSet Name="FK_TBL_ARCHIVO_GLOBAL_TBL_GLOBAL" Association="BD_NETModel1.FK_TBL_ARCHIVO_GLOBAL_TBL_GLOBAL">
+            <End Role="TBL_GLOBAL" EntitySet="TBL_GLOBAL" />
+            <End Role="TBL_ARCHIVO_GLOBAL" EntitySet="TBL_ARCHIVO_GLOBAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBL_GLOBAL_TBL_USUARIO" Association="BD_NETModel1.FK_TBL_GLOBAL_TBL_USUARIO">
+            <End Role="TBL_USUARIO" EntitySet="TBL_USUARIO" />
+            <End Role="TBL_GLOBAL" EntitySet="TBL_GLOBAL" />
+          </AssociationSet>
+          <EntitySet Name="TBL_NET_FACTURA" EntityType="BD_NETModel1.TBL_NET_FACTURA" />
+          <EntitySet Name="TBL_NET_HISTORICO_FACTURA" EntityType="BD_NETModel1.TBL_NET_HISTORICO_FACTURA" />
+          <EntitySet Name="TBL_LOG" EntityType="BD_NETModel1.TBL_LOG" />
+          <EntitySet Name="TBL_NET_BONO" EntityType="BD_NETModel1.TBL_NET_BONO" />
+          <EntitySet Name="TBL_NET_BONO_HISTORICO" EntityType="BD_NETModel1.TBL_NET_BONO_HISTORICO" />
+          </EntityContainer>
+        <EntityType Name="TBL_FOLIOS">
+          <Key>
+            <PropertyRef Name="FOLIO_SIAC" />
+          </Key>
+          <Property Name="FOLIO_SIAC" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_CAPTURA" Type="DateTime" Precision="3" />
+          <Property Name="ESTRATEGIA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PROMOTOR" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ESTATUS_SIAC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TIPO_LINEA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="LINEA_CONTRATADA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AREA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DIVICION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TIENDA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PAQUETE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OBSERVACIONES" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="RESPUESTA_TELMEX" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MOTIVO_RECHAZO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFONO_ASIGNADO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFONO_PORTADO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OS_ALTA_LINEA_MULTIORDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_OS_ALTA_LINEA_MULTIORDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ORDEN_SERVICIO_TV" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_OS_TV" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CAMPANA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ESTATUS_ATENCION_MULTIORDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ESTATUS_PISA_MULTIORDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PISA_OS_FECHA_POSTEO_MULTIORDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ESTATUS_PISA_TV" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PISA_OS_FECHA_POSTEO_TV" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_CAMBIO_ESTATUS_SIAC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CLAVE_EMPRESA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRE_EMPRESA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SERVICIO_FACTURACION_TERCEROS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ETAPA_PISA_MULTIORDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ETAPA_PISA_TV" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ETIQUETA_TRAFICO_VOZ" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TRAFICO_VOZ_ENTRANTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TRAFICO_VOZ_SALIENTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_TRAFICO_VOZ" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TRAFICO_DATOS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_TRAFICO_DATOS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_FACTURCION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DESCRIPCION_VALIDA_ADEUDO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CORREO_ELECTRONICO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TERMINAL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DISTRITO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TECELULAR" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_CREACION" Type="DateTime" Precision="3" />
+          <Property Name="FECHA_CALCULO_COMISION" Type="DateTime" Precision="3" />
+          <Property Name="ESTATUS_PAGADO" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBL_ARCHIVO_GLOBAL">
+          <Key>
+            <PropertyRef Name="ID_ARCHIVO_GLOBAL" />
+          </Key>
+          <Property Name="ID_ARCHIVO_GLOBAL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_GLOBAL" Type="Int32" />
+          <Property Name="NOMBRE_ARCHIVO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EXT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="RUTA" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TBL_GLOBAL" Relationship="BD_NETModel1.FK_TBL_ARCHIVO_GLOBAL_TBL_GLOBAL" FromRole="TBL_ARCHIVO_GLOBAL" ToRole="TBL_GLOBAL" />
+        </EntityType>
+        <EntityType Name="TBL_COMISION_PROMOTOR">
+          <Key>
+            <PropertyRef Name="ID_COMISION_PROMOTOR" />
+          </Key>
+          <Property Name="ID_COMISION_PROMOTOR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SERVICIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TIPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PAQUETE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COMISION" Type="Double" />
+        </EntityType>
+        <EntityType Name="TBL_GLOBAL">
+          <Key>
+            <PropertyRef Name="ID_GLOBAL" />
+          </Key>
+          <Property Name="ID_GLOBAL" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_PROMOTOR" Type="Int32" />
+          <Property Name="FECHA_ELABORACION" Type="DateTime" Precision="3" />
+          <Property Name="FILDER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_CAPTURA" Type="DateTime" Precision="3" />
+          <Property Name="MESA_CONTROL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRE_CLIENTE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TEL_CONTACTO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SERVICIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TIPO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PAQUETE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FOLIO_SIAC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PAGO_A_PROMOTOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ESTATUS_PAGO_INGRESO" Type="Boolean" />
+          <Property Name="FECHA_PAGO_INGRESO" Type="DateTime" Precision="0" />
+          <Property Name="ESTATUS_PAGO_POSTEO" Type="Boolean" />
+          <Property Name="FECHA_PAGO_POSTEO" Type="DateTime" Precision="0" />
+          <Property Name="OBSERVACIONES" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ESTATUS_PAGO_INGRESO_LIDER" Type="Boolean" />
+          <Property Name="FECHA_PAGO_INGRESO_LIDER" Type="DateTime" Precision="0" />
+          <Property Name="ESTATUS_PAGO_POSTEO_LIDER" Type="Boolean" />
+          <Property Name="FECHA_PAGO_POSTEO_LIDER" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="TBL_ARCHIVO_GLOBAL" Relationship="BD_NETModel1.FK_TBL_ARCHIVO_GLOBAL_TBL_GLOBAL" FromRole="TBL_GLOBAL" ToRole="TBL_ARCHIVO_GLOBAL" />
+          <NavigationProperty Name="TBL_USUARIO" Relationship="BD_NETModel1.FK_TBL_GLOBAL_TBL_USUARIO" FromRole="TBL_GLOBAL" ToRole="TBL_USUARIO" />
+        </EntityType>
+        <Association Name="FK_TBL_ARCHIVO_GLOBAL_TBL_GLOBAL">
+          <End Type="BD_NETModel1.TBL_GLOBAL" Role="TBL_GLOBAL" Multiplicity="0..1" />
+          <End Type="BD_NETModel1.TBL_ARCHIVO_GLOBAL" Role="TBL_ARCHIVO_GLOBAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_GLOBAL">
+              <PropertyRef Name="ID_GLOBAL" />
+            </Principal>
+            <Dependent Role="TBL_ARCHIVO_GLOBAL">
+              <PropertyRef Name="ID_GLOBAL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBL_GLOBAL_TBL_USUARIO">
+          <End Type="BD_NETModel1.TBL_USUARIO" Role="TBL_USUARIO" Multiplicity="0..1" />
+          <End Type="BD_NETModel1.TBL_GLOBAL" Role="TBL_GLOBAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBL_USUARIO">
+              <PropertyRef Name="ID_USUARIO" />
+            </Principal>
+            <Dependent Role="TBL_GLOBAL">
+              <PropertyRef Name="ID_PROMOTOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TBL_NET_FACTURA">
+          <Key>
+            <PropertyRef Name="ID_FACTURA" />
+          </Key>
+          <Property Name="ID_FACTURA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QUINCENA" Type="DateTime" Precision="0" />
+          <Property Name="FOLIO_SIAC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IMPORTE_BASE" Type="Double" />
+          <Property Name="IMPORTE_POSTEO" Type="Double" />
+          <Property Name="PISA_E" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PROCEDE2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PAGO2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OS_PAGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ESTATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LINEA_CONTRATADA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PAQUETE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBL_NET_HISTORICO_FACTURA">
+          <Key>
+            <PropertyRef Name="ID_HISTORICO_FACTURA" />
+          </Key>
+          <Property Name="ID_HISTORICO_FACTURA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QUINCENA" Type="DateTime" Precision="0" />
+          <Property Name="FOLIO_SIAC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IMPORTE_BASE" Type="Double" />
+          <Property Name="IMPORTE_POSTEO" Type="Double" />
+          <Property Name="PISA_E" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PROCEDE2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PAGO2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OS_PAGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ESTATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LINEA_CONTRATADA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PAQUETE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBL_LOG">
+          <Key>
+            <PropertyRef Name="ID_LOG" />
+          </Key>
+          <Property Name="ID_LOG" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FECHA" Type="DateTime" Precision="3" />
+          <Property Name="USUARIO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBL_NET_BONO">
+          <Key>
+            <PropertyRef Name="ID_BONO" />
+          </Key>
+          <Property Name="ID_BONO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QUINCENA" Type="DateTime" Precision="0" />
+          <Property Name="RUBRO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FOLIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IMPORTE_EFECTIVIDAD" Type="Double" />
+          <Property Name="IMPORTE_COMERCIO" Type="Double" />
+          <Property Name="IMPORTE_CALIDAD" Type="Double" />
+        </EntityType>
+        <EntityType Name="TBL_NET_BONO_HISTORICO">
+          <Key>
+            <PropertyRef Name="ID_BONO_HISTORICO" />
+          </Key>
+          <Property Name="ID_BONO_HISTORICO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QUINCENA" Type="DateTime" Precision="0" />
+          <Property Name="RUBRO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FOLIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IMPORTE_EFECTIVIDAD" Type="Double" />
+          <Property Name="IMPORTE_COMERCIO" Type="Double" />
+          <Property Name="IMPORTE_CALIDAD" Type="Double" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BD_NETModel1StoreContainer" CdmEntityContainer="EntitiesFilder">
+          <EntitySetMapping Name="TBL_JERARQUIA">
+            <EntityTypeMapping TypeName="BD_NETModel1.TBL_JERARQUIA">
+              <MappingFragment StoreEntitySet="TBL_JERARQUIA">
+                <ScalarProperty Name="ID_JERARQUIA" ColumnName="ID_JERARQUIA" />
+                <ScalarProperty Name="JERARQUIA" ColumnName="JERARQUIA" />
+                <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_USUARIO">
+            <EntityTypeMapping TypeName="BD_NETModel1.TBL_USUARIO">
+              <MappingFragment StoreEntitySet="TBL_USUARIO">
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="ID_JERARQUIA" ColumnName="ID_JERARQUIA" />
+                <ScalarProperty Name="ID_JEFE" ColumnName="ID_JEFE" />
+                <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+                <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
+                <ScalarProperty Name="APELLIDO_PATERNO" ColumnName="APELLIDO_PATERNO" />
+                <ScalarProperty Name="APELLIDO_MATERNO" ColumnName="APELLIDO_MATERNO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="CURP" ColumnName="CURP" />
+                <ScalarProperty Name="RFC" ColumnName="RFC" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+                <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+                <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+                <ScalarProperty Name="FECHA_ACTUALIZACION" ColumnName="FECHA_ACTUALIZACION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_FOLIOS">
+            <EntityTypeMapping TypeName="BD_NETModel1.TBL_FOLIOS">
+              <MappingFragment StoreEntitySet="TBL_FOLIOS">
+                <ScalarProperty Name="ESTATUS_PAGADO" ColumnName="ESTATUS_PAGADO" />
+                <ScalarProperty Name="FECHA_CALCULO_COMISION" ColumnName="FECHA_CALCULO_COMISION" />
+                <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+                <ScalarProperty Name="TECELULAR" ColumnName="TECELULAR" />
+                <ScalarProperty Name="DISTRITO" ColumnName="DISTRITO" />
+                <ScalarProperty Name="TERMINAL" ColumnName="TERMINAL" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="CORREO_ELECTRONICO" ColumnName="CORREO_ELECTRONICO" />
+                <ScalarProperty Name="DESCRIPCION_VALIDA_ADEUDO" ColumnName="DESCRIPCION_VALIDA_ADEUDO" />
+                <ScalarProperty Name="FECHA_FACTURCION" ColumnName="FECHA_FACTURCION" />
+                <ScalarProperty Name="FECHA_TRAFICO_DATOS" ColumnName="FECHA_TRAFICO_DATOS" />
+                <ScalarProperty Name="TRAFICO_DATOS" ColumnName="TRAFICO_DATOS" />
+                <ScalarProperty Name="FECHA_TRAFICO_VOZ" ColumnName="FECHA_TRAFICO_VOZ" />
+                <ScalarProperty Name="TRAFICO_VOZ_SALIENTE" ColumnName="TRAFICO_VOZ_SALIENTE" />
+                <ScalarProperty Name="TRAFICO_VOZ_ENTRANTE" ColumnName="TRAFICO_VOZ_ENTRANTE" />
+                <ScalarProperty Name="ETIQUETA_TRAFICO_VOZ" ColumnName="ETIQUETA_TRAFICO_VOZ" />
+                <ScalarProperty Name="ETAPA_PISA_TV" ColumnName="ETAPA_PISA_TV" />
+                <ScalarProperty Name="ETAPA_PISA_MULTIORDEN" ColumnName="ETAPA_PISA_MULTIORDEN" />
+                <ScalarProperty Name="SERVICIO_FACTURACION_TERCEROS" ColumnName="SERVICIO_FACTURACION_TERCEROS" />
+                <ScalarProperty Name="NOMBRE_EMPRESA" ColumnName="NOMBRE_EMPRESA" />
+                <ScalarProperty Name="CLAVE_EMPRESA" ColumnName="CLAVE_EMPRESA" />
+                <ScalarProperty Name="FECHA_CAMBIO_ESTATUS_SIAC" ColumnName="FECHA_CAMBIO_ESTATUS_SIAC" />
+                <ScalarProperty Name="PISA_OS_FECHA_POSTEO_TV" ColumnName="PISA_OS_FECHA_POSTEO_TV" />
+                <ScalarProperty Name="ESTATUS_PISA_TV" ColumnName="ESTATUS_PISA_TV" />
+                <ScalarProperty Name="PISA_OS_FECHA_POSTEO_MULTIORDEN" ColumnName="PISA_OS_FECHA_POSTEO_MULTIORDEN" />
+                <ScalarProperty Name="ESTATUS_PISA_MULTIORDEN" ColumnName="ESTATUS_PISA_MULTIORDEN" />
+                <ScalarProperty Name="ESTATUS_ATENCION_MULTIORDEN" ColumnName="ESTATUS_ATENCION_MULTIORDEN" />
+                <ScalarProperty Name="CAMPANA" ColumnName="CAMPANA" />
+                <ScalarProperty Name="FECHA_OS_TV" ColumnName="FECHA_OS_TV" />
+                <ScalarProperty Name="ORDEN_SERVICIO_TV" ColumnName="ORDEN_SERVICIO_TV" />
+                <ScalarProperty Name="FECHA_OS_ALTA_LINEA_MULTIORDEN" ColumnName="FECHA_OS_ALTA_LINEA_MULTIORDEN" />
+                <ScalarProperty Name="OS_ALTA_LINEA_MULTIORDEN" ColumnName="OS_ALTA_LINEA_MULTIORDEN" />
+                <ScalarProperty Name="TELEFONO_PORTADO" ColumnName="TELEFONO_PORTADO" />
+                <ScalarProperty Name="TELEFONO_ASIGNADO" ColumnName="TELEFONO_ASIGNADO" />
+                <ScalarProperty Name="MOTIVO_RECHAZO" ColumnName="MOTIVO_RECHAZO" />
+                <ScalarProperty Name="RESPUESTA_TELMEX" ColumnName="RESPUESTA_TELMEX" />
+                <ScalarProperty Name="OBSERVACIONES" ColumnName="OBSERVACIONES" />
+                <ScalarProperty Name="PAQUETE" ColumnName="PAQUETE" />
+                <ScalarProperty Name="TIENDA" ColumnName="TIENDA" />
+                <ScalarProperty Name="DIVICION" ColumnName="DIVICION" />
+                <ScalarProperty Name="AREA" ColumnName="AREA" />
+                <ScalarProperty Name="LINEA_CONTRATADA" ColumnName="LINEA_CONTRATADA" />
+                <ScalarProperty Name="TIPO_LINEA" ColumnName="TIPO_LINEA" />
+                <ScalarProperty Name="ESTATUS_SIAC" ColumnName="ESTATUS_SIAC" />
+                <ScalarProperty Name="PROMOTOR" ColumnName="PROMOTOR" />
+                <ScalarProperty Name="ESTRATEGIA" ColumnName="ESTRATEGIA" />
+                <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+                <ScalarProperty Name="FOLIO_SIAC" ColumnName="FOLIO_SIAC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_ARCHIVO_GLOBAL">
+            <EntityTypeMapping TypeName="BD_NETModel1.TBL_ARCHIVO_GLOBAL">
+              <MappingFragment StoreEntitySet="TBL_ARCHIVO_GLOBAL">
+                <ScalarProperty Name="RUTA" ColumnName="RUTA" />
+                <ScalarProperty Name="EXT" ColumnName="EXT" />
+                <ScalarProperty Name="NOMBRE_ARCHIVO" ColumnName="NOMBRE_ARCHIVO" />
+                <ScalarProperty Name="ID_GLOBAL" ColumnName="ID_GLOBAL" />
+                <ScalarProperty Name="ID_ARCHIVO_GLOBAL" ColumnName="ID_ARCHIVO_GLOBAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_COMISION_PROMOTOR">
+            <EntityTypeMapping TypeName="BD_NETModel1.TBL_COMISION_PROMOTOR">
+              <MappingFragment StoreEntitySet="TBL_COMISION_PROMOTOR">
+                <ScalarProperty Name="COMISION" ColumnName="COMISION" />
+                <ScalarProperty Name="PAQUETE" ColumnName="PAQUETE" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="SERVICIO" ColumnName="SERVICIO" />
+                <ScalarProperty Name="ID_COMISION_PROMOTOR" ColumnName="ID_COMISION_PROMOTOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_GLOBAL">
+            <EntityTypeMapping TypeName="BD_NETModel1.TBL_GLOBAL">
+              <MappingFragment StoreEntitySet="TBL_GLOBAL">
+                <ScalarProperty Name="FECHA_PAGO_POSTEO_LIDER" ColumnName="FECHA_PAGO_POSTEO_LIDER" />
+                <ScalarProperty Name="ESTATUS_PAGO_POSTEO_LIDER" ColumnName="ESTATUS_PAGO_POSTEO_LIDER" />
+                <ScalarProperty Name="FECHA_PAGO_INGRESO_LIDER" ColumnName="FECHA_PAGO_INGRESO_LIDER" />
+                <ScalarProperty Name="ESTATUS_PAGO_INGRESO_LIDER" ColumnName="ESTATUS_PAGO_INGRESO_LIDER" />
+                <ScalarProperty Name="OBSERVACIONES" ColumnName="OBSERVACIONES" />
+                <ScalarProperty Name="FECHA_PAGO_POSTEO" ColumnName="FECHA_PAGO_POSTEO" />
+                <ScalarProperty Name="ESTATUS_PAGO_POSTEO" ColumnName="ESTATUS_PAGO_POSTEO" />
+                <ScalarProperty Name="FECHA_PAGO_INGRESO" ColumnName="FECHA_PAGO_INGRESO" />
+                <ScalarProperty Name="ESTATUS_PAGO_INGRESO" ColumnName="ESTATUS_PAGO_INGRESO" />
+                <ScalarProperty Name="PAGO_A_PROMOTOR" ColumnName="PAGO_A_PROMOTOR" />
+                <ScalarProperty Name="FOLIO_SIAC" ColumnName="FOLIO_SIAC" />
+                <ScalarProperty Name="PAQUETE" ColumnName="PAQUETE" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="SERVICIO" ColumnName="SERVICIO" />
+                <ScalarProperty Name="TEL_CONTACTO" ColumnName="TEL_CONTACTO" />
+                <ScalarProperty Name="NOMBRE_CLIENTE" ColumnName="NOMBRE_CLIENTE" />
+                <ScalarProperty Name="MESA_CONTROL" ColumnName="MESA_CONTROL" />
+                <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+                <ScalarProperty Name="FILDER" ColumnName="FILDER" />
+                <ScalarProperty Name="FECHA_ELABORACION" ColumnName="FECHA_ELABORACION" />
+                <ScalarProperty Name="ID_PROMOTOR" ColumnName="ID_PROMOTOR" />
+                <ScalarProperty Name="ID_GLOBAL" ColumnName="ID_GLOBAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_NET_FACTURA">
+            <EntityTypeMapping TypeName="BD_NETModel1.TBL_NET_FACTURA">
+              <MappingFragment StoreEntitySet="TBL_NET_FACTURA">
+                <ScalarProperty Name="PAQUETE" ColumnName="PAQUETE" />
+                <ScalarProperty Name="LINEA_CONTRATADA" ColumnName="LINEA_CONTRATADA" />
+                <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+                <ScalarProperty Name="OS_PAGO" ColumnName="OS_PAGO" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="PAGO2" ColumnName="PAGO2" />
+                <ScalarProperty Name="PROCEDE2" ColumnName="PROCEDE2" />
+                <ScalarProperty Name="PISA_E" ColumnName="PISA_E" />
+                <ScalarProperty Name="IMPORTE_POSTEO" ColumnName="IMPORTE_POSTEO" />
+                <ScalarProperty Name="IMPORTE_BASE" ColumnName="IMPORTE_BASE" />
+                <ScalarProperty Name="FOLIO_SIAC" ColumnName="FOLIO_SIAC" />
+                <ScalarProperty Name="QUINCENA" ColumnName="QUINCENA" />
+                <ScalarProperty Name="ID_FACTURA" ColumnName="ID_FACTURA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_NET_HISTORICO_FACTURA">
+            <EntityTypeMapping TypeName="BD_NETModel1.TBL_NET_HISTORICO_FACTURA">
+              <MappingFragment StoreEntitySet="TBL_NET_HISTORICO_FACTURA">
+                <ScalarProperty Name="PAQUETE" ColumnName="PAQUETE" />
+                <ScalarProperty Name="LINEA_CONTRATADA" ColumnName="LINEA_CONTRATADA" />
+                <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+                <ScalarProperty Name="OS_PAGO" ColumnName="OS_PAGO" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="PAGO2" ColumnName="PAGO2" />
+                <ScalarProperty Name="PROCEDE2" ColumnName="PROCEDE2" />
+                <ScalarProperty Name="PISA_E" ColumnName="PISA_E" />
+                <ScalarProperty Name="IMPORTE_POSTEO" ColumnName="IMPORTE_POSTEO" />
+                <ScalarProperty Name="IMPORTE_BASE" ColumnName="IMPORTE_BASE" />
+                <ScalarProperty Name="FOLIO_SIAC" ColumnName="FOLIO_SIAC" />
+                <ScalarProperty Name="QUINCENA" ColumnName="QUINCENA" />
+                <ScalarProperty Name="ID_HISTORICO_FACTURA" ColumnName="ID_HISTORICO_FACTURA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_LOG">
+            <EntityTypeMapping TypeName="BD_NETModel1.TBL_LOG">
+              <MappingFragment StoreEntitySet="TBL_LOG">
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="ID_LOG" ColumnName="ID_LOG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_NET_BONO">
+            <EntityTypeMapping TypeName="BD_NETModel1.TBL_NET_BONO">
+              <MappingFragment StoreEntitySet="TBL_NET_BONO">
+                <ScalarProperty Name="IMPORTE_CALIDAD" ColumnName="IMPORTE_CALIDAD" />
+                <ScalarProperty Name="IMPORTE_COMERCIO" ColumnName="IMPORTE_COMERCIO" />
+                <ScalarProperty Name="IMPORTE_EFECTIVIDAD" ColumnName="IMPORTE_EFECTIVIDAD" />
+                <ScalarProperty Name="FOLIO" ColumnName="FOLIO" />
+                <ScalarProperty Name="RUBRO" ColumnName="RUBRO" />
+                <ScalarProperty Name="QUINCENA" ColumnName="QUINCENA" />
+                <ScalarProperty Name="ID_BONO" ColumnName="ID_BONO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_NET_BONO_HISTORICO">
+            <EntityTypeMapping TypeName="BD_NETModel1.TBL_NET_BONO_HISTORICO">
+              <MappingFragment StoreEntitySet="TBL_NET_BONO_HISTORICO">
+                <ScalarProperty Name="IMPORTE_CALIDAD" ColumnName="IMPORTE_CALIDAD" />
+                <ScalarProperty Name="IMPORTE_COMERCIO" ColumnName="IMPORTE_COMERCIO" />
+                <ScalarProperty Name="IMPORTE_EFECTIVIDAD" ColumnName="IMPORTE_EFECTIVIDAD" />
+                <ScalarProperty Name="FOLIO" ColumnName="FOLIO" />
+                <ScalarProperty Name="RUBRO" ColumnName="RUBRO" />
+                <ScalarProperty Name="QUINCENA" ColumnName="QUINCENA" />
+                <ScalarProperty Name="ID_BONO_HISTORICO" ColumnName="ID_BONO_HISTORICO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

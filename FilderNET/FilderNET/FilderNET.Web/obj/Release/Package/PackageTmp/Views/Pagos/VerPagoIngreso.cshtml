@@ -1,0 +1,106 @@
+﻿@model IEnumerable<FilderNET.Web.Models.DO_Pago>
+
+@{
+    ViewBag.Title = "VerPagoIngreso";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <table class="table table-responsive">
+
+        <tr>
+            <th>
+                NOMBRE_CLIENTE
+            </th>
+            <th>
+                SERVICIO
+            </th>
+            <th>
+                TIPO LINEA
+            </th>
+            <th>
+                PAQUETE
+            </th>
+            <th>
+                NOMBRE_PROMOTOR
+            </th>
+            <th>
+                FOLIO SIAC
+            </th>
+            <th>
+                AREA
+            </th>
+            <th>
+                INGRESO
+            </th>
+            <th>
+                PAGO POR
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NOMBRE_CLIENTE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SERVICIO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TIPO_LINEA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PAQUETE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NOMBRE_PROMOTOR)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FOLIO_SIAC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AREA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.INGRESO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CONCEPTO)
+                </td>
+            </tr>
+        }
+
+    </table>
+
+<div>
+    <button type="button" class="btn btn-info" onclick="pagar()">Pagar</button>
+</div>
+<div>
+    @Html.ActionLink("Bajar caratula","DownloadCaratula","Pagos")
+</div>
+
+@section Scripts{
+<script type="text/javascript">
+        function pagar() {
+            var urlSave = '@Url.Action("Pagar","Pagos")';
+            var _parametro = "";
+            $.ajax({
+                type: "POST",
+                url: urlSave,
+                data: JSON.stringify({ parametro : _parametro }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    alert("Pago realizado con exito!");
+                },
+                error: function (data) {
+                    alert("Error al pagar!");
+                }
+            });
+        }
+</script>
+
+
+
+}

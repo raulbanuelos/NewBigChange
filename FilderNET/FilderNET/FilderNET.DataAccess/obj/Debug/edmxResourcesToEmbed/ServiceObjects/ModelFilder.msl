@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BD_NETModelStoreContainer" CdmEntityContainer="BD_NETEntities">
+    <EntitySetMapping Name="TBL_FOLIOS">
+      <EntityTypeMapping TypeName="BD_NETModel.TBL_FOLIOS">
+        <MappingFragment StoreEntitySet="TBL_FOLIOS">
+          <ScalarProperty Name="FOLIO_SIAC" ColumnName="FOLIO_SIAC" />
+          <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+          <ScalarProperty Name="ESTRATEGIA" ColumnName="ESTRATEGIA" />
+          <ScalarProperty Name="PROMOTOR" ColumnName="PROMOTOR" />
+          <ScalarProperty Name="ESTATUS_SIAC" ColumnName="ESTATUS_SIAC" />
+          <ScalarProperty Name="TIPO_LINEA" ColumnName="TIPO_LINEA" />
+          <ScalarProperty Name="LINEA_CONTRATADA" ColumnName="LINEA_CONTRATADA" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="DIVICION" ColumnName="DIVICION" />
+          <ScalarProperty Name="TIENDA" ColumnName="TIENDA" />
+          <ScalarProperty Name="PAQUETE" ColumnName="PAQUETE" />
+          <ScalarProperty Name="OBSERVACIONES" ColumnName="OBSERVACIONES" />
+          <ScalarProperty Name="RESPUESTA_TELMEX" ColumnName="RESPUESTA_TELMEX" />
+          <ScalarProperty Name="MOTIVO_RECHAZO" ColumnName="MOTIVO_RECHAZO" />
+          <ScalarProperty Name="TELEFONO_ASIGNADO" ColumnName="TELEFONO_ASIGNADO" />
+          <ScalarProperty Name="TELEFONO_PORTADO" ColumnName="TELEFONO_PORTADO" />
+          <ScalarProperty Name="OS_ALTA_LINEA_MULTIORDEN" ColumnName="OS_ALTA_LINEA_MULTIORDEN" />
+          <ScalarProperty Name="FECHA_OS_ALTA_LINEA_MULTIORDEN" ColumnName="FECHA_OS_ALTA_LINEA_MULTIORDEN" />
+          <ScalarProperty Name="ORDEN_SERVICIO_TV" ColumnName="ORDEN_SERVICIO_TV" />
+          <ScalarProperty Name="FECHA_OS_TV" ColumnName="FECHA_OS_TV" />
+          <ScalarProperty Name="CAMPANA" ColumnName="CAMPANA" />
+          <ScalarProperty Name="ESTATUS_ATENCION_MULTIORDEN" ColumnName="ESTATUS_ATENCION_MULTIORDEN" />
+          <ScalarProperty Name="ESTATUS_PISA_MULTIORDEN" ColumnName="ESTATUS_PISA_MULTIORDEN" />
+          <ScalarProperty Name="PISA_OS_FECHA_POSTEO_MULTIORDEN" ColumnName="PISA_OS_FECHA_POSTEO_MULTIORDEN" />
+          <ScalarProperty Name="ESTATUS_PISA_TV" ColumnName="ESTATUS_PISA_TV" />
+          <ScalarProperty Name="PISA_OS_FECHA_POSTEO_TV" ColumnName="PISA_OS_FECHA_POSTEO_TV" />
+          <ScalarProperty Name="FECHA_CAMBIO_ESTATUS_SIAC" ColumnName="FECHA_CAMBIO_ESTATUS_SIAC" />
+          <ScalarProperty Name="CLAVE_EMPRESA" ColumnName="CLAVE_EMPRESA" />
+          <ScalarProperty Name="NOMBRE_EMPRESA" ColumnName="NOMBRE_EMPRESA" />
+          <ScalarProperty Name="SERVICIO_FACTURACION_TERCEROS" ColumnName="SERVICIO_FACTURACION_TERCEROS" />
+          <ScalarProperty Name="ETAPA_PISA_MULTIORDEN" ColumnName="ETAPA_PISA_MULTIORDEN" />
+          <ScalarProperty Name="ETAPA_PISA_TV" ColumnName="ETAPA_PISA_TV" />
+          <ScalarProperty Name="ETIQUETA_TRAFICO_VOZ" ColumnName="ETIQUETA_TRAFICO_VOZ" />
+          <ScalarProperty Name="TRAFICO_VOZ_ENTRANTE" ColumnName="TRAFICO_VOZ_ENTRANTE" />
+          <ScalarProperty Name="TRAFICO_VOZ_SALIENTE" ColumnName="TRAFICO_VOZ_SALIENTE" />
+          <ScalarProperty Name="FECHA_TRAFICO_VOZ" ColumnName="FECHA_TRAFICO_VOZ" />
+          <ScalarProperty Name="TRAFICO_DATOS" ColumnName="TRAFICO_DATOS" />
+          <ScalarProperty Name="FECHA_TRAFICO_DATOS" ColumnName="FECHA_TRAFICO_DATOS" />
+          <ScalarProperty Name="FECHA_FACTURCION" ColumnName="FECHA_FACTURCION" />
+          <ScalarProperty Name="DESCRIPCION_VALIDA_ADEUDO" ColumnName="DESCRIPCION_VALIDA_ADEUDO" />
+          <ScalarProperty Name="CORREO_ELECTRONICO" ColumnName="CORREO_ELECTRONICO" />
+          <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TERMINAL" ColumnName="TERMINAL" />
+          <ScalarProperty Name="DISTRITO" ColumnName="DISTRITO" />
+          <ScalarProperty Name="TECELULAR" ColumnName="TECELULAR" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_CALCULO_COMISION" ColumnName="FECHA_CALCULO_COMISION" />
+          <ScalarProperty Name="ESTATUS_PAGADO" ColumnName="ESTATUS_PAGADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_JERARQUIA">
+      <EntityTypeMapping TypeName="BD_NETModel.TBL_JERARQUIA">
+        <MappingFragment StoreEntitySet="TBL_JERARQUIA">
+          <ScalarProperty Name="ID_JERARQUIA" ColumnName="ID_JERARQUIA" />
+          <ScalarProperty Name="JERARQUIA" ColumnName="JERARQUIA" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_USUARIO">
+      <EntityTypeMapping TypeName="BD_NETModel.TBL_USUARIO">
+        <MappingFragment StoreEntitySet="TBL_USUARIO">
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="ID_JERARQUIA" ColumnName="ID_JERARQUIA" />
+          <ScalarProperty Name="ID_JEFE" ColumnName="ID_JEFE" />
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
+          <ScalarProperty Name="APELLIDO_PATERNO" ColumnName="APELLIDO_PATERNO" />
+          <ScalarProperty Name="APELLIDO_MATERNO" ColumnName="APELLIDO_MATERNO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+          <ScalarProperty Name="CURP" ColumnName="CURP" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+          <ScalarProperty Name="ACTIVO" ColumnName="ACTIVO" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="FECHA_ACTUALIZACION" ColumnName="FECHA_ACTUALIZACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

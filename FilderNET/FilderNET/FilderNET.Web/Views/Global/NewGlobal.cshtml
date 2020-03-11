@@ -1,0 +1,282 @@
+﻿@model FilderNET.Web.Models.ModeloGlobal
+
+@{
+    ViewBag.Title = "NewGlobal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>NewGlobal</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card m-b-30">
+            <div class="card-body">
+                <h4 class="mt-0 header-title">Registro</h4>
+
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">FECHA ELABORACIÓN</label>
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.FECHA_ELABORACION, new { htmlAttributes = new { @class = "form-control", @id = "datepicker-autoclose-fechaelaboracion" } })*@
+                        <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker-autoclose-fechaelaboracion">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">FILDER</label>
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.FILDER, new { htmlAttributes = new { @class = "form-control" } })*@
+                        <input type="text" required class="form-control" id="txtFilder" />
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">FECHA CAPTURA</label>
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.FECHA_CAPTURA, new { htmlAttributes = new { @class = "form-control", @id = "datepicker-autoclose-fechacaptura" } })*@
+                        <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker-autoclose-fechacaptura">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">MESA CONTROL</label>
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.MESA_CONTROL, new { htmlAttributes = new { @class = "form-control" } })*@
+                        <input type="text" required class="form-control" id="txtMesaControl" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">NOMBRE CLIENTE</label>
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.NOMBRE_CLIENTE, new { htmlAttributes = new { @class = "form-control" } })*@
+                        <input type="text" required class="form-control" id="txtNombreCliente" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">TEL DE CONTACTO</label>
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.TEL_CONTACTO, new { htmlAttributes = new { @class = "form-control" } })*@
+                        <input type="text" required class="form-control" id="txtTelefono" />
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">SERVICIO</label>
+                    <div class="col-md-10">
+                        @*@Html.DropDownListFor(model => model.SERVICIO_SELECTED, new SelectList(ViewBag.SERVICIOS, "Value", "Text"), new { @class = "form-control m-bot15" })*@
+                        <select id="cboServicio" class="form-control">
+                            @if (((List<SelectListItem>)ViewBag.SERVICIOS).Count > 0)
+                            {
+                                foreach (SelectListItem servicio in (List<SelectListItem>)ViewBag.SERVICIOS)
+                                {
+                                    <option id="@servicio.Value" value="@servicio.Value">@servicio.Text</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">TIPO</label>
+                    <div class="col-md-10">
+                        @*@Html.DropDownListFor(model => model.TIPO, new SelectList(ViewBag.TIPOS, "Value", "Text"), new { @class = "form-control m-bot15" })*@
+                        <select id="cboTipo" class="form-control">
+                            @if (((List<SelectListItem>)ViewBag.TIPOS).Count > 0)
+                            {
+                                foreach (SelectListItem tipo in (List<SelectListItem>)ViewBag.TIPOS)
+                                {
+                                    <option id="@tipo.Value" value="@tipo.Value">@tipo.Text</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">PAQUETE</label>
+                    <div class="col-md-10">
+                        @*@Html.DropDownListFor(model => model.PAQUETE, new SelectList(ViewBag.PAQUETES, "Value", "Text"), new { @class = "form-control m-bot15" })*@
+                        <select id="cboPaquete" class="form-control">
+                            @if (((List<SelectListItem>)ViewBag.PAQUETES).Count > 0)
+                            {
+                                foreach (SelectListItem paquete in (List<SelectListItem>)ViewBag.PAQUETES)
+                                {
+                                    <option id="@paquete.Value" value="@paquete.Value">@paquete.Text</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">PROMOTOR</label>
+                    <div class="col-md-10">
+                        @*@Html.DropDownListFor(model => model.PROMOTOR_SELECTED, new SelectList(ViewBag.PROMOTORES, "Value", "Text"), new { @class = "form-control m-bot15" })*@
+                        <select id="cboPromotor" class="form-control">
+                            @if (((List<SelectListItem>)ViewBag.PROMOTORES).Count > 0)
+                            {
+                                foreach (SelectListItem promotor in (List<SelectListItem>)ViewBag.PROMOTORES)
+                                {
+                                    <option id="@promotor.Value" value="@promotor.Value">@promotor.Text</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">FOLIO SIAC</label>
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.FOLIO_SIAC, new { htmlAttributes = new { @class = "form-control" } })*@
+                        <input type="text" required class="form-control" id="txtFolioSIAC" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-2 col-form-label">OBSERVACIONES</label>
+                    <div class="col-md-10">
+                        <textarea required class="form-control" rows="5" id="txtObservaciones"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div>
+                        <button onclick="Guardar()" class="btn btn-primary waves-effect waves-light">
+                            Guardar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title mt-0" id="myModalLabel">Información</h4>
+            </div>
+            <div class="modal-body">
+                <h5>Registro dado de alta correctamente.</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Ok</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+@section Scripts
+    {
+    <!-- jQuery  -->
+    <script src="@Url.Content("~/assets/js/jquery.slimscroll.js")"></script>
+    <script src="@Url.Content("~/assets/js/jquery.blockUI.js")"></script>
+
+    <!-- Plugins js -->
+    <script src="@Url.Content("~/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js")"></script>
+    <script src="@Url.Content("~/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js")"></script>
+    <script src="@Url.Content("~/assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js")" type="text/javascript"></script>
+
+    <!-- Plugins Init js -->
+    <script src="@Url.Content("~/assets/pages/form-advanced.js")"></script>
+
+    <script>
+        function Guardar() {
+            if (Validar()) {
+                //Si es válido
+                var urlSave = '@Url.Action("SaveNewGlobal","Global")';
+                var _fechaElaboracion = $("#datepicker-autoclose-fechaelaboracion").val();
+                var _filder = $("#txtFilder").val();
+                var _fechaCaptura = $("#datepicker-autoclose-fechacaptura").val();
+                var _mesaControl = $("#txtMesaControl").val();
+                var _nombreCliente = $("#txtNombreCliente").val();
+                var _telefono = $("#txtTelefono").val();
+                var _servicio = $("#cboServicio").val();
+                var _tipo = $("#cboTipo").val();
+                var _paquete = $("#cboPaquete").val();
+                var _promotor = $("#cboPromotor").val();
+                var _folioSIAC = $("#txtFolioSIAC").val();
+                var _observaciones = $("#txtObservaciones").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: urlSave,
+                    data: JSON.stringify({fechaElaboracion : _fechaElaboracion, filder: _filder, fechaCaptura: _fechaCaptura, mesaControl: _mesaControl, nombreCliente: _nombreCliente, telefono: _telefono, servicio: _servicio, tipo: _tipo, paquete: _paquete, promotor: _promotor, folioSIAC: _folioSIAC, observaciones: _observaciones}),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data == "success") {
+                            limpiarDatos();
+                            $("#myModal").modal();
+                        }
+                        else {
+                            if (data == "FolioSIACError") {
+                                alert("El folio SIAC ya esta dado de alta, por favor revisa la información.");
+                            } else {
+                                alert("Error al guardar, favor de intentar mas tarde.");
+                            }
+                        }
+                    },
+                    error: function (data) {
+                        alert("Error");
+                    }
+                });
+            } else {
+                //si es inválido;
+            }
+        }
+        function Validar() {
+            var _fechaElaboracion = $("#datepicker-autoclose-fechaelaboracion").val();
+            var _filder = $("#txtFilder").val();
+            var _fechaCaptura = $("#datepicker-autoclose-fechacaptura").val();
+            var _mesaControl = $("#txtMesaControl").val();
+            var _nombreCliente = $("#txtNombreCliente").val();
+            var _telefono = $("#txtTelefono").val();
+
+            if (_fechaElaboracion == "") {
+                alert("Por favor seleccione la fecha de elaboración.");
+                return false;
+            }
+            if (_filder == "") {
+                alert("Por favor ingrese el filder.");
+                return false;
+            }
+            if (_fechaCaptura == "") {
+                alert("Por favor seleccione la fecha de captura.");
+                return false;
+            }
+            if (_mesaControl == "") {
+                alert("Por favor ingrese mesa de control.");
+                return false;
+            }
+            if (_nombreCliente == "") {
+                alert("Por favor ingrese el nombre del cliente.");
+                return false;
+            }
+            if (_telefono == "") {
+                alert("Por favor ingrese el teléfono");
+                return false;
+            }
+            
+            return true;
+        }
+
+        function limpiarDatos() {
+            $("#txtFilder").val("");
+            $("#txtMesaControl").val("");
+            $("#txtNombreCliente").val("");
+            $("#txtTelefono").val("");
+            $("#cboServicio").val("");
+            $("#txtFolioSIAC").val("");
+            $("#txtObservaciones").val("");
+        }
+    </script>
+}
+

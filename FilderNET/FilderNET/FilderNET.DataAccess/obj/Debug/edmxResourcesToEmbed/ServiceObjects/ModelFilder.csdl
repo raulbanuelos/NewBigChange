@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BD_NETModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TBL_FOLIOS">
+    <Key>
+      <PropertyRef Name="FOLIO_SIAC" />
+    </Key>
+    <Property Name="FOLIO_SIAC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FECHA_CAPTURA" Type="DateTime" Precision="3" />
+    <Property Name="ESTRATEGIA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PROMOTOR" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ESTATUS_SIAC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TIPO_LINEA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LINEA_CONTRATADA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AREA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DIVICION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TIENDA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PAQUETE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OBSERVACIONES" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RESPUESTA_TELMEX" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MOTIVO_RECHAZO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TELEFONO_ASIGNADO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TELEFONO_PORTADO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="OS_ALTA_LINEA_MULTIORDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_OS_ALTA_LINEA_MULTIORDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ORDEN_SERVICIO_TV" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_OS_TV" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CAMPANA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ESTATUS_ATENCION_MULTIORDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ESTATUS_PISA_MULTIORDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PISA_OS_FECHA_POSTEO_MULTIORDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ESTATUS_PISA_TV" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PISA_OS_FECHA_POSTEO_TV" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_CAMBIO_ESTATUS_SIAC" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CLAVE_EMPRESA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE_EMPRESA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SERVICIO_FACTURACION_TERCEROS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ETAPA_PISA_MULTIORDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ETAPA_PISA_TV" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ETIQUETA_TRAFICO_VOZ" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TRAFICO_VOZ_ENTRANTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TRAFICO_VOZ_SALIENTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_TRAFICO_VOZ" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TRAFICO_DATOS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_TRAFICO_DATOS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_FACTURCION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION_VALIDA_ADEUDO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CORREO_ELECTRONICO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_NACIMIENTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TERMINAL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DISTRITO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TECELULAR" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_CREACION" Type="DateTime" Precision="3" />
+    <Property Name="FECHA_CALCULO_COMISION" Type="DateTime" Precision="3" />
+    <Property Name="ESTATUS_PAGADO" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TBL_JERARQUIA">
+    <Key>
+      <PropertyRef Name="ID_JERARQUIA" />
+    </Key>
+    <Property Name="ID_JERARQUIA" Type="Int32" Nullable="false" />
+    <Property Name="JERARQUIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VALOR" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TBL_USUARIO" Relationship="Self.FK_TBL_USUARIO_TBL_JERARQUIA" FromRole="TBL_JERARQUIA" ToRole="TBL_USUARIO" />
+  </EntityType>
+  <EntityType Name="TBL_USUARIO">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_JERARQUIA" Type="Int32" Nullable="false" />
+    <Property Name="ID_JEFE" Type="Int32" />
+    <Property Name="USUARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CONTRASENA" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="APELLIDO_PATERNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="APELLIDO_MATERNO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FECHA_NACIMIENTO" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CURP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RFC" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FOTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVO" Type="Boolean" Nullable="false" />
+    <Property Name="FECHA_CREACION" Type="DateTime" Precision="0" />
+    <Property Name="FECHA_ACTUALIZACION" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="TBL_JERARQUIA" Relationship="Self.FK_TBL_USUARIO_TBL_JERARQUIA" FromRole="TBL_USUARIO" ToRole="TBL_JERARQUIA" />
+  </EntityType>
+  <Association Name="FK_TBL_USUARIO_TBL_JERARQUIA">
+    <End Role="TBL_JERARQUIA" Type="Self.TBL_JERARQUIA" Multiplicity="1" />
+    <End Role="TBL_USUARIO" Type="Self.TBL_USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_JERARQUIA">
+        <PropertyRef Name="ID_JERARQUIA" />
+      </Principal>
+      <Dependent Role="TBL_USUARIO">
+        <PropertyRef Name="ID_JERARQUIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BD_NETEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBL_FOLIOS" EntityType="Self.TBL_FOLIOS" />
+    <EntitySet Name="TBL_JERARQUIA" EntityType="Self.TBL_JERARQUIA" />
+    <EntitySet Name="TBL_USUARIO" EntityType="Self.TBL_USUARIO" />
+    <AssociationSet Name="FK_TBL_USUARIO_TBL_JERARQUIA" Association="Self.FK_TBL_USUARIO_TBL_JERARQUIA">
+      <End Role="TBL_JERARQUIA" EntitySet="TBL_JERARQUIA" />
+      <End Role="TBL_USUARIO" EntitySet="TBL_USUARIO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
