@@ -1369,6 +1369,34 @@ namespace FilderNET.Web.Models
 
             return listaFactura;
         }
+
+        public static List<DO_Log> GetLog()
+        {
+            SO_LOG ServiceLog = new SO_LOG();
+
+            List<DO_Log> listaLog = new List<DO_Log>();
+
+            IList informacionBD = ServiceLog.Get();
+
+            if (informacionBD != null)
+            {
+                foreach (var item in informacionBD)
+                {
+                    Type type = item.GetType();
+
+                    DO_Log log = new DO_Log();
+
+                    log.ID = Convert.ToInt32(type.GetProperty("ID_LOG").GetValue(item, null));
+                    log.Fecha = Convert.ToDateTime(type.GetProperty("FECHA").GetValue(item, null));
+                    log.Usuario = Convert.ToString(type.GetProperty("USUARIO").GetValue(item, null));
+                    log.Descripcion = Convert.ToString(type.GetProperty("DESCRIPCION").GetValue(item, null));
+
+                    listaLog.Add(log);
+                }
+            }
+
+            return listaLog;
+        }
         #endregion
 
         #endregion

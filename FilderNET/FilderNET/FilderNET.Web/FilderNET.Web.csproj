@@ -176,6 +176,7 @@
     <Compile Include="Controllers\FacturaController.cs" />
     <Compile Include="Controllers\GlobalController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LogController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PagosController.cs" />
     <Compile Include="Controllers\PersonalController.cs" />
@@ -189,6 +190,7 @@
     <Compile Include="Models\DO_Archivo.cs" />
     <Compile Include="Models\DO_Bono.cs" />
     <Compile Include="Models\DO_Factura.cs" />
+    <Compile Include="Models\DO_Log.cs" />
     <Compile Include="Models\DO_Pago.cs" />
     <Compile Include="Models\DO_Usuario.cs" />
     <Compile Include="Models\Ilist.cs" />
@@ -1960,6 +1962,7 @@
     <Content Include="Views\Supervisor\GetGlobalSupervisor.cshtml" />
     <Content Include="Views\Factura\CargarFactura.cshtml" />
     <Content Include="Views\Bono\CargarBono.cshtml" />
+    <Content Include="Views\Log\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
