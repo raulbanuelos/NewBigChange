@@ -76,3 +76,13 @@ C:\Users\M0051722\Desktop\FilderNET\FilderNET\FilderNET\FilderNET\FilderNET.Data
 C:\Users\M0051722\Desktop\FilderNET\FilderNET\FilderNET\FilderNET\FilderNET.DataAccess\obj\Debug\FilderNET.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\M0051722\Desktop\FilderNET\FilderNET\FilderNET\FilderNET\FilderNET.DataAccess\obj\Debug\FilderNET.DataAccess.dll
 C:\Users\M0051722\Desktop\FilderNET\FilderNET\FilderNET\FilderNET\FilderNET.DataAccess\obj\Debug\FilderNET.DataAccess.pdb
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.DataAccess\bin\Debug\FilderNET.DataAccess.dll.config
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.DataAccess\bin\Debug\FilderNET.DataAccess.dll
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.DataAccess\bin\Debug\FilderNET.DataAccess.pdb
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.DataAccess\obj\Debug\FilderNET.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.DataAccess\obj\Debug\FilderNET.DataAccess.dll
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.DataAccess\obj\Debug\FilderNET.DataAccess.pdb

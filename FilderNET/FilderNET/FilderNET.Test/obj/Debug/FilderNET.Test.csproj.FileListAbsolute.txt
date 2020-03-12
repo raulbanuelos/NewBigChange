@@ -80,3 +80,13 @@ C:\Users\M0051722\Desktop\a subir\FilderNET\FilderNET\FilderNET\FilderNET\Filder
 C:\Users\M0051722\Desktop\a subir\FilderNET\FilderNET\FilderNET\FilderNET\FilderNET.Test\obj\Debug\FilderNET.Test.csprojResolveAssemblyReference.cache
 C:\Users\M0051722\Desktop\a subir\FilderNET\FilderNET\FilderNET\FilderNET\FilderNET.Test\obj\Debug\FilderNET.Test.dll
 C:\Users\M0051722\Desktop\a subir\FilderNET\FilderNET\FilderNET\FilderNET\FilderNET.Test\obj\Debug\FilderNET.Test.pdb
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Debug\FilderNET.Test.dll.config
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Debug\FilderNET.Test.dll
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Debug\FilderNET.Test.pdb
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Debug\EntityFramework.dll
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Debug\EntityFramework.xml
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\obj\Debug\FilderNET.Test.csprojResolveAssemblyReference.cache
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\obj\Debug\FilderNET.Test.dll
+C:\Users\M0051722\Source\Repos\raulbanuelos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\obj\Debug\FilderNET.Test.pdb
