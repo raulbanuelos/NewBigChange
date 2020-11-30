@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-
+using System.IO;
+using System.Text;
 
 namespace FilderNET.DataAccess.SQLServer
 {
@@ -72,9 +73,18 @@ namespace FilderNET.DataAccess.SQLServer
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception er)
             {
                 //Registrar el error.
+                string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                // Write the string array to a new file named "WriteLines.txt".
+                using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "ErrorSQL.txt")))
+                {
+                    outputFile.WriteLine("Fecha: " + DateTime.Now.ToString());
+                    outputFile.WriteLine("Mensaje: " + er.Message);
+                    outputFile.WriteLine("StackTrace: " + er.StackTrace);
+                    outputFile.WriteLine("------------------------------------------------------------");
+                }
             }
             finally
             {

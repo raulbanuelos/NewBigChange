@@ -100,3 +100,15 @@ C:\Users\raulb\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\
 C:\Users\raulb\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\obj\Debug\FilderNET.Test.csprojResolveAssemblyReference.cache
 C:\Users\raulb\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\obj\Debug\FilderNET.Test.dll
 C:\Users\raulb\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\obj\Debug\FilderNET.Test.pdb
+C:\Users\m0051722\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Debug\FilderNET.Test.dll.config
+C:\Users\m0051722\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Debug\FilderNET.Test.dll
+C:\Users\m0051722\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Debug\FilderNET.Test.pdb
+C:\Users\m0051722\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Debug\EntityFramework.dll
+C:\Users\m0051722\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\m0051722\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Debug\EntityFramework.xml
+C:\Users\m0051722\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\m0051722\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\obj\Debug\FilderNET.Test.csprojAssemblyReference.cache
+C:\Users\m0051722\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\obj\Debug\FilderNET.Test.csproj.CoreCompileInputs.cache
+C:\Users\m0051722\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\obj\Debug\FilderNET.Test.csproj.CopyComplete
+C:\Users\m0051722\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\obj\Debug\FilderNET.Test.dll
+C:\Users\m0051722\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\obj\Debug\FilderNET.Test.pdb
