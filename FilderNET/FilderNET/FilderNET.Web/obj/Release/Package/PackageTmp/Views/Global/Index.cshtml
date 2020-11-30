@@ -7,11 +7,30 @@
 <style>
     th {
         font-size: 12px;
-        font-weight: bold
+        font-weight: bold;
     }
 
     td {
-        font-size: 12px
+        font-size: 12px;
+    }
+
+    .pagado {
+        background-color: green;
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+    }
+
+    .nopagado {
+        background-color: red;
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+    }
+
+    .formatopagos {
+        font-size: small;
+        text-align: center;
     }
 </style>
 
@@ -64,9 +83,36 @@
                             <th>
                                 AREA
                             </th>
-                            <th>
-                                ACCIONES
-                            </th>
+
+                            @if ((bool)Session["BAN_MASTER"] || (bool)Session["BAN_DUENO"] || (bool)Session["BAN_SISTEMAS"])
+                            {
+
+
+                                <th>
+                                    FACTURA INGRESO
+                                </th>
+                                <th>
+                                    FACTURA POSTEO
+                                </th>
+
+                                <th>
+                                    BONO COMERCIO
+                                </th>
+                                <th>
+                                    BONO EFECTIVIDAD
+                                </th>
+                                <th>
+                                    BONO CALIDAD
+                                </th>
+
+                                <th>
+                                    EDITAR
+                                </th>
+
+                                <th>
+                                    ELIMINAR
+                                </th>
+                            }
                         </tr>
                     </thead>
 
@@ -125,20 +171,98 @@
                                 <td>
                                     @Html.DisplayFor(modelItem => item.AREA)
                                 </td>
-                                <td>
-                                    <div>
-                                        <a href="@Url.Action("EditGlobal","Global", new { ID_GLOBAL = item.ID_GLOBAL})" class="btn btn-info waves-effect waves-light">Detalle</a>
-                                    </div>
 
-                                    @if ((bool)Session["BAN_MASTER"] || (bool)Session["BAN_DUENO"] || (bool)Session["BAN_SISTEMAS"])
+
+
+                                @if ((bool)Session["BAN_MASTER"] || (bool)Session["BAN_DUENO"] || (bool)Session["BAN_SISTEMAS"])
+                                {
+                                    if (item.FACTURA_INGRESO > 0)
                                     {
+                                        <td class="formatopagos">
+                                            <div>
+                                                <span class="badge badge-success">$ @Html.DisplayFor(modelItem => item.FACTURA_INGRESO)</span>
+                                            </div>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td class="formatopagos">
+                                            <div>
+                                                <span class="badge badge-warning">$0</span>
+                                            </div>
+                                        </td>
+                                    }
+
+                                    if (item.FACTURA_POSTEO > 0)
+                                    {
+                                        <td class="formatopagos">
+                                            <div>
+                                                <span class="badge badge-success">$ @Html.DisplayFor(modelItem => item.FACTURA_POSTEO)</span>
+                                            </div>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td class="formatopagos">
+                                            <div>
+                                                <span class="badge badge-warning">$0</span>
+                                            </div>
+                                        </td>
+                                    }
+
+                                    if (item.FACTURA_BONO_COMERCIO > 0)
+                                    {
+                                        <td class="formatopagos">
+                                            <span class="badge badge-success">$ @item.FACTURA_BONO_COMERCIO</span>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td class="formatopagos">
+                                            <span class="badge badge-warning">$0</span>
+                                        </td>
+                                    }
+
+                                    if (item.FACTURA_BONO_EFECTIVIDAD > 0)
+                                    {
+                                        <td class="formatopagos">
+                                            <span class="badge badge-success">$ @item.FACTURA_BONO_EFECTIVIDAD</span>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td class="formatopagos">
+                                            <span class="badge badge-warning">$0</span>
+                                        </td>
+                                    }
+
+                                    if (item.FACTURA_BONO_CALIDAD > 0)
+                                    {
+                                        <td class="formatopagos">
+                                            <span class="badge badge-success">$ @item.FACTURA_BONO_CALIDAD</span>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td class="formatopagos">
+                                            <span class="badge badge-warning">$0</span>
+                                        </td>
+                                    }
+
+                                    <td>
+                                        <div>
+                                            <a href="@Url.Action("EditGlobal","Global", new { ID_GLOBAL = item.ID_GLOBAL})" class="btn btn-info waves-effect waves-light">Detalle</a>
+                                        </div>
+                                    </td>
+
+                                    <td>
                                         <div>
                                             <a href="@Url.Action("DeleteGlobal","Global", new { idGlobal = item.ID_GLOBAL})" class="btn btn-danger waves-effect waves-light">Eliminar</a>
                                         </div>
-                                    }
-                                </td>
+                                    </td>
+                                }
                             </tr>
-                        }
+                                    }
                     </tbody>
                 </table>
             </div>

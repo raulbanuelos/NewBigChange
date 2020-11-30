@@ -44,3 +44,13 @@ C:\Users\Administrator\Desktop\SISTEMABIG\FilderNET\FilderNET\FilderNET\FilderNE
 C:\Users\Administrator\Desktop\SISTEMABIG\FilderNET\FilderNET\FilderNET\FilderNET.Test\obj\Release\FilderNET.Test.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\SISTEMABIG\FilderNET\FilderNET\FilderNET\FilderNET.Test\obj\Release\FilderNET.Test.dll
 C:\Users\Administrator\Desktop\SISTEMABIG\FilderNET\FilderNET\FilderNET\FilderNET.Test\obj\Release\FilderNET.Test.pdb
+C:\Users\raulb\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Release\FilderNET.Test.dll.config
+C:\Users\raulb\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Release\FilderNET.Test.dll
+C:\Users\raulb\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Release\FilderNET.Test.pdb
+C:\Users\raulb\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Release\EntityFramework.dll
+C:\Users\raulb\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\raulb\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Release\EntityFramework.xml
+C:\Users\raulb\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\raulb\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\obj\Release\FilderNET.Test.csprojResolveAssemblyReference.cache
+C:\Users\raulb\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\obj\Release\FilderNET.Test.dll
+C:\Users\raulb\Source\Repos\NewBigChange\FilderNET\FilderNET\FilderNET.Test\obj\Release\FilderNET.Test.pdb

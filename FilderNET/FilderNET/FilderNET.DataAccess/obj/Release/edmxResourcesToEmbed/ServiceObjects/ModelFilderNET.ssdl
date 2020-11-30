@@ -115,8 +115,68 @@
     </Key>
     <Property Name="ID_LOG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FECHA" Type="datetime" />
-    <Property Name="USUARIO" Type="varchar" MaxLength="100" />
-    <Property Name="DESCRIPCION" Type="varchar" MaxLength="500" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="200" />
+    <Property Name="DESCRIPCION" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="TBL_NET_BONO">
+    <Key>
+      <PropertyRef Name="ID_BONO" />
+    </Key>
+    <Property Name="ID_BONO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QUINCENA" Type="date" />
+    <Property Name="RUBRO" Type="varchar" MaxLength="50" />
+    <Property Name="FOLIO" Type="varchar" MaxLength="50" />
+    <Property Name="IMPORTE_EFECTIVIDAD" Type="float" />
+    <Property Name="IMPORTE_COMERCIO" Type="float" />
+    <Property Name="IMPORTE_CALIDAD" Type="float" />
+  </EntityType>
+  <EntityType Name="TBL_NET_BONO_HISTORICO">
+    <Key>
+      <PropertyRef Name="ID_BONO_HISTORICO" />
+    </Key>
+    <Property Name="ID_BONO_HISTORICO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QUINCENA" Type="date" />
+    <Property Name="RUBRO" Type="varchar" MaxLength="50" />
+    <Property Name="FOLIO" Type="varchar" MaxLength="50" />
+    <Property Name="IMPORTE_EFECTIVIDAD" Type="float" />
+    <Property Name="IMPORTE_COMERCIO" Type="float" />
+    <Property Name="IMPORTE_CALIDAD" Type="float" />
+  </EntityType>
+  <EntityType Name="TBL_NET_FACTURA">
+    <Key>
+      <PropertyRef Name="ID_FACTURA" />
+    </Key>
+    <Property Name="ID_FACTURA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QUINCENA" Type="date" />
+    <Property Name="FOLIO_SIAC" Type="varchar" MaxLength="50" />
+    <Property Name="IMPORTE_BASE" Type="float" />
+    <Property Name="IMPORTE_POSTEO" Type="float" />
+    <Property Name="PISA_E" Type="varchar" MaxLength="50" />
+    <Property Name="PROCEDE2" Type="varchar" MaxLength="50" />
+    <Property Name="PAGO2" Type="varchar" MaxLength="50" />
+    <Property Name="FECHA" Type="varchar" MaxLength="50" />
+    <Property Name="OS_PAGO" Type="varchar" MaxLength="50" />
+    <Property Name="ESTATUS" Type="varchar" MaxLength="50" />
+    <Property Name="LINEA_CONTRATADA" Type="varchar" MaxLength="50" />
+    <Property Name="PAQUETE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBL_NET_HISTORICO_FACTURA">
+    <Key>
+      <PropertyRef Name="ID_HISTORICO_FACTURA" />
+    </Key>
+    <Property Name="ID_HISTORICO_FACTURA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QUINCENA" Type="date" />
+    <Property Name="FOLIO_SIAC" Type="varchar" MaxLength="50" />
+    <Property Name="IMPORTE_BASE" Type="float" />
+    <Property Name="IMPORTE_POSTEO" Type="float" />
+    <Property Name="PISA_E" Type="varchar" MaxLength="50" />
+    <Property Name="PROCEDE2" Type="varchar" MaxLength="50" />
+    <Property Name="PAGO2" Type="varchar" MaxLength="50" />
+    <Property Name="FECHA" Type="varchar" MaxLength="50" />
+    <Property Name="OS_PAGO" Type="varchar" MaxLength="50" />
+    <Property Name="ESTATUS" Type="varchar" MaxLength="50" />
+    <Property Name="LINEA_CONTRATADA" Type="varchar" MaxLength="50" />
+    <Property Name="PAQUETE" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="TBL_USUARIO">
     <Key>
@@ -183,6 +243,10 @@
     <EntitySet Name="TBL_GLOBAL" EntityType="Self.TBL_GLOBAL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBL_JERARQUIA" EntityType="Self.TBL_JERARQUIA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBL_LOG" EntityType="Self.TBL_LOG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_NET_BONO" EntityType="Self.TBL_NET_BONO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_NET_BONO_HISTORICO" EntityType="Self.TBL_NET_BONO_HISTORICO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_NET_FACTURA" EntityType="Self.TBL_NET_FACTURA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_NET_HISTORICO_FACTURA" EntityType="Self.TBL_NET_HISTORICO_FACTURA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBL_USUARIO" EntityType="Self.TBL_USUARIO" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_TBL_ARCHIVO_GLOBAL_TBL_GLOBAL" Association="Self.FK_TBL_ARCHIVO_GLOBAL_TBL_GLOBAL">
       <End Role="TBL_GLOBAL" EntitySet="TBL_GLOBAL" />

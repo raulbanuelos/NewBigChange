@@ -138,6 +138,44 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TBL_NET_FACTURA">
+      <EntityTypeMapping TypeName="BD_NETModel1.TBL_NET_FACTURA">
+        <MappingFragment StoreEntitySet="TBL_NET_FACTURA">
+          <ScalarProperty Name="PAQUETE" ColumnName="PAQUETE" />
+          <ScalarProperty Name="LINEA_CONTRATADA" ColumnName="LINEA_CONTRATADA" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="OS_PAGO" ColumnName="OS_PAGO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="PAGO2" ColumnName="PAGO2" />
+          <ScalarProperty Name="PROCEDE2" ColumnName="PROCEDE2" />
+          <ScalarProperty Name="PISA_E" ColumnName="PISA_E" />
+          <ScalarProperty Name="IMPORTE_POSTEO" ColumnName="IMPORTE_POSTEO" />
+          <ScalarProperty Name="IMPORTE_BASE" ColumnName="IMPORTE_BASE" />
+          <ScalarProperty Name="FOLIO_SIAC" ColumnName="FOLIO_SIAC" />
+          <ScalarProperty Name="QUINCENA" ColumnName="QUINCENA" />
+          <ScalarProperty Name="ID_FACTURA" ColumnName="ID_FACTURA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_NET_HISTORICO_FACTURA">
+      <EntityTypeMapping TypeName="BD_NETModel1.TBL_NET_HISTORICO_FACTURA">
+        <MappingFragment StoreEntitySet="TBL_NET_HISTORICO_FACTURA">
+          <ScalarProperty Name="PAQUETE" ColumnName="PAQUETE" />
+          <ScalarProperty Name="LINEA_CONTRATADA" ColumnName="LINEA_CONTRATADA" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="OS_PAGO" ColumnName="OS_PAGO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="PAGO2" ColumnName="PAGO2" />
+          <ScalarProperty Name="PROCEDE2" ColumnName="PROCEDE2" />
+          <ScalarProperty Name="PISA_E" ColumnName="PISA_E" />
+          <ScalarProperty Name="IMPORTE_POSTEO" ColumnName="IMPORTE_POSTEO" />
+          <ScalarProperty Name="IMPORTE_BASE" ColumnName="IMPORTE_BASE" />
+          <ScalarProperty Name="FOLIO_SIAC" ColumnName="FOLIO_SIAC" />
+          <ScalarProperty Name="QUINCENA" ColumnName="QUINCENA" />
+          <ScalarProperty Name="ID_HISTORICO_FACTURA" ColumnName="ID_HISTORICO_FACTURA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="TBL_LOG">
       <EntityTypeMapping TypeName="BD_NETModel1.TBL_LOG">
         <MappingFragment StoreEntitySet="TBL_LOG">
@@ -145,6 +183,32 @@
           <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
           <ScalarProperty Name="FECHA" ColumnName="FECHA" />
           <ScalarProperty Name="ID_LOG" ColumnName="ID_LOG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_NET_BONO">
+      <EntityTypeMapping TypeName="BD_NETModel1.TBL_NET_BONO">
+        <MappingFragment StoreEntitySet="TBL_NET_BONO">
+          <ScalarProperty Name="IMPORTE_CALIDAD" ColumnName="IMPORTE_CALIDAD" />
+          <ScalarProperty Name="IMPORTE_COMERCIO" ColumnName="IMPORTE_COMERCIO" />
+          <ScalarProperty Name="IMPORTE_EFECTIVIDAD" ColumnName="IMPORTE_EFECTIVIDAD" />
+          <ScalarProperty Name="FOLIO" ColumnName="FOLIO" />
+          <ScalarProperty Name="RUBRO" ColumnName="RUBRO" />
+          <ScalarProperty Name="QUINCENA" ColumnName="QUINCENA" />
+          <ScalarProperty Name="ID_BONO" ColumnName="ID_BONO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_NET_BONO_HISTORICO">
+      <EntityTypeMapping TypeName="BD_NETModel1.TBL_NET_BONO_HISTORICO">
+        <MappingFragment StoreEntitySet="TBL_NET_BONO_HISTORICO">
+          <ScalarProperty Name="IMPORTE_CALIDAD" ColumnName="IMPORTE_CALIDAD" />
+          <ScalarProperty Name="IMPORTE_COMERCIO" ColumnName="IMPORTE_COMERCIO" />
+          <ScalarProperty Name="IMPORTE_EFECTIVIDAD" ColumnName="IMPORTE_EFECTIVIDAD" />
+          <ScalarProperty Name="FOLIO" ColumnName="FOLIO" />
+          <ScalarProperty Name="RUBRO" ColumnName="RUBRO" />
+          <ScalarProperty Name="QUINCENA" ColumnName="QUINCENA" />
+          <ScalarProperty Name="ID_BONO_HISTORICO" ColumnName="ID_BONO_HISTORICO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

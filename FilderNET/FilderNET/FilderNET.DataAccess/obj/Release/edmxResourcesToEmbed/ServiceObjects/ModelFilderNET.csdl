@@ -64,7 +64,11 @@
       <End Role="TBL_USUARIO" EntitySet="TBL_USUARIO" />
       <End Role="TBL_GLOBAL" EntitySet="TBL_GLOBAL" />
     </AssociationSet>
+    <EntitySet Name="TBL_NET_FACTURA" EntityType="BD_NETModel1.TBL_NET_FACTURA" />
+    <EntitySet Name="TBL_NET_HISTORICO_FACTURA" EntityType="BD_NETModel1.TBL_NET_HISTORICO_FACTURA" />
     <EntitySet Name="TBL_LOG" EntityType="BD_NETModel1.TBL_LOG" />
+    <EntitySet Name="TBL_NET_BONO" EntityType="BD_NETModel1.TBL_NET_BONO" />
+    <EntitySet Name="TBL_NET_BONO_HISTORICO" EntityType="BD_NETModel1.TBL_NET_BONO_HISTORICO" />
   </EntityContainer>
   <EntityType Name="TBL_FOLIOS">
     <Key>
@@ -194,13 +198,73 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="TBL_NET_FACTURA">
+    <Key>
+      <PropertyRef Name="ID_FACTURA" />
+    </Key>
+    <Property Name="ID_FACTURA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QUINCENA" Type="DateTime" Precision="0" />
+    <Property Name="FOLIO_SIAC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IMPORTE_BASE" Type="Double" />
+    <Property Name="IMPORTE_POSTEO" Type="Double" />
+    <Property Name="PISA_E" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PROCEDE2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAGO2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OS_PAGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ESTATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LINEA_CONTRATADA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAQUETE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBL_NET_HISTORICO_FACTURA">
+    <Key>
+      <PropertyRef Name="ID_HISTORICO_FACTURA" />
+    </Key>
+    <Property Name="ID_HISTORICO_FACTURA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QUINCENA" Type="DateTime" Precision="0" />
+    <Property Name="FOLIO_SIAC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IMPORTE_BASE" Type="Double" />
+    <Property Name="IMPORTE_POSTEO" Type="Double" />
+    <Property Name="PISA_E" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PROCEDE2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAGO2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OS_PAGO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ESTATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LINEA_CONTRATADA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAQUETE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
   <EntityType Name="TBL_LOG">
     <Key>
       <PropertyRef Name="ID_LOG" />
     </Key>
     <Property Name="ID_LOG" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="FECHA" Type="DateTime" Precision="3" />
-    <Property Name="USUARIO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="DESCRIPCION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="USUARIO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBL_NET_BONO">
+    <Key>
+      <PropertyRef Name="ID_BONO" />
+    </Key>
+    <Property Name="ID_BONO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QUINCENA" Type="DateTime" Precision="0" />
+    <Property Name="RUBRO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FOLIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IMPORTE_EFECTIVIDAD" Type="Double" />
+    <Property Name="IMPORTE_COMERCIO" Type="Double" />
+    <Property Name="IMPORTE_CALIDAD" Type="Double" />
+  </EntityType>
+  <EntityType Name="TBL_NET_BONO_HISTORICO">
+    <Key>
+      <PropertyRef Name="ID_BONO_HISTORICO" />
+    </Key>
+    <Property Name="ID_BONO_HISTORICO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QUINCENA" Type="DateTime" Precision="0" />
+    <Property Name="RUBRO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FOLIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IMPORTE_EFECTIVIDAD" Type="Double" />
+    <Property Name="IMPORTE_COMERCIO" Type="Double" />
+    <Property Name="IMPORTE_CALIDAD" Type="Double" />
   </EntityType>
 </Schema>
